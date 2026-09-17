@@ -67,7 +67,7 @@
   /* Z-Indices */
   --z-base: 1;
   --z-header: 100;
-  --z-cursor: 900;
-  --z-modal: 1000;
-  --z-toast: 1100;
+  --z-modal: 10000;
+  --z-cursor: 20000;
+  --z-toast: 30000;
 }
