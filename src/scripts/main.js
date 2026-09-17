@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initJournal();
   initInstagramGrid();
   initScrollReveals();
-  initAmbientSound();
 });
 
 /* ==========================================================================
@@ -331,79 +330,4 @@ function initScrollReveals() {
   });
 }
 
-/* ==========================================================================
-   Ambient Audio Experience (Web Audio API Synthesized Indian Tanpura Drone)
-   ========================================================================== */
-function initAmbientSound() {
-  const toggleBtn = document.getElementById('audioToggleBtn');
-  if (!toggleBtn) return;
 
-  let audioCtx = null;
-  let isPlaying = false;
-  let oscillators = [];
-  let masterGain = null;
-
-  function startAmbientChords() {
-    const AudioContext = window.AudioContext || window.webkitAudioContext;
-    if (!AudioContext) return;
-
-    if (!audioCtx) {
-      audioCtx = new AudioContext();
-    }
-
-    if (audioCtx.state === 'suspended') {
-      audioCtx.resume();
-    }
-
-    masterGain = audioCtx.createGain();
-    masterGain.gain.setValueAtTime(0.0001, audioCtx.currentTime);
-    masterGain.gain.exponentialRampToValueAtTime(0.045, audioCtx.currentTime + 2.5);
-    masterGain.connect(audioCtx.destination);
-
-    // Warm meditative harmonic frequencies (D modal Indian drone: D3, A3, D4, F#4)
-    const freqs = [146.83, 220.00, 293.66, 369.99];
-
-    oscillators = freqs.map((freq, i) => {
-      const osc = audioCtx.createOscillator();
-      const gain = audioCtx.createGain();
-      osc.type = i % 2 === 0 ? 'sine' : 'triangle';
-      osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-      osc.detune.setValueAtTime((i - 1.5) * 4, audioCtx.currentTime);
-
-      gain.gain.setValueAtTime(0.28 / freqs.length, audioCtx.currentTime);
-      osc.connect(gain);
-      gain.connect(masterGain);
-      osc.start();
-      return osc;
-    });
-
-    isPlaying = true;
-    toggleBtn.classList.add('is-playing');
-    toggleBtn.setAttribute('aria-label', 'Mute ambient soundscape');
-    toggleBtn.querySelector('.audio-label').textContent = 'SOUND ON';
-  }
-
-  function stopAmbientChords() {
-    if (masterGain && audioCtx) {
-      masterGain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 1.2);
-      setTimeout(() => {
-        oscillators.forEach(osc => {
-          try { osc.stop(); } catch(e) {}
-        });
-        oscillators = [];
-        isPlaying = false;
-        toggleBtn.classList.remove('is-playing');
-        toggleBtn.setAttribute('aria-label', 'Play ambient soundscape (Tanpura drone)');
-        toggleBtn.querySelector('.audio-label').textContent = 'SOUND OFF';
-      }, 1200);
-    }
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    if (!isPlaying) {
-      startAmbientChords();
-    } else {
-      stopAmbientChords();
-    }
-  });
-}

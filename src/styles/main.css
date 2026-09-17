@@ -129,59 +129,6 @@ button {
   border-width: 0;
 }
 
-/* Ambient Audio Status Indicator */
-.audio-toggle-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-sans);
-  font-size: var(--text-xs);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--color-text-primary);
-  background: transparent;
-  border: 1px solid var(--color-border-medium);
-  border-radius: 100px;
-  padding: 0.4rem 0.9rem;
-  cursor: pointer;
-  transition: all var(--duration-fast) ease;
-}
-
-.audio-toggle-btn:hover {
-  background-color: var(--color-near-black);
-  color: var(--color-white);
-  border-color: var(--color-near-black);
-}
-
-.sound-waves {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  height: 10px;
-}
-
-.sound-bar {
-  width: 2px;
-  height: 100%;
-  background-color: currentColor;
-  border-radius: 1px;
-  transition: height 0.2s ease;
-}
-
-.audio-toggle-btn.is-playing .sound-bar:nth-child(1) {
-  animation: soundWave 0.8s ease infinite alternate;
-}
-.audio-toggle-btn.is-playing .sound-bar:nth-child(2) {
-  animation: soundWave 1.2s ease infinite alternate 0.2s;
-}
-.audio-toggle-btn.is-playing .sound-bar:nth-child(3) {
-  animation: soundWave 0.9s ease infinite alternate 0.4s;
-}
-
-@keyframes soundWave {
-  0% { height: 20%; }
-  100% { height: 100%; }
-}
 
 /* ==========================================================================
    RESPONSIVE DESIGN SYSTEM
@@ -254,23 +201,63 @@ button {
 /* Mobile Devices (768px and below) */
 @media (max-width: 768px) {
   :root {
-    --space-3xl: 5rem;
-    --space-2xl: 4rem;
-    --container-padding: 1.5rem;
+    --space-3xl: 4.5rem;
+    --space-2xl: 3.5rem;
+    --container-padding: 1.25rem;
   }
 
   .site-header {
-    padding: 1.25rem 0;
+    padding: 1rem 0;
+  }
+
+  .site-header.is-scrolled {
+    padding: 0.75rem 0;
   }
 
   .brand-title {
-    font-size: 1.2rem;
+    font-size: 1.125rem;
+    letter-spacing: 0.12em;
+  }
+
+  .brand-sub {
+    font-size: 0.52rem;
+    letter-spacing: 0.16em;
+  }
+
+  .nav-actions {
+    gap: 0.6rem;
+  }
+
+  .btn-inquire-pill {
+    padding: 0.42rem 0.85rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+  }
+
+  .icon-btn {
+    width: 34px;
+    height: 34px;
   }
 
   .hero-actions {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1.25rem;
+    align-items: stretch;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .btn-hero-primary {
+    width: 100%;
+    justify-content: center;
+    padding: 0.95rem 1.5rem;
+    text-align: center;
+  }
+
+  .hero-link-secondary {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 0.65rem 0;
   }
 
   .hero-footer-meta {
@@ -281,28 +268,36 @@ button {
 
   .editorial-gallery-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
   }
 
   .gallery-filter-bar {
-    gap: 1rem;
+    gap: 0.85rem;
     overflow-x: auto;
     padding-bottom: 0.5rem;
     width: 100%;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .gallery-filter-bar::-webkit-scrollbar {
+    display: none;
   }
 
   .filter-btn {
     white-space: nowrap;
+    font-size: 0.65rem;
+    padding: 0.4rem 0.6rem;
   }
 
   .service-row {
     grid-template-columns: 40px 1fr 24px;
-    padding: 1.75rem 0;
+    padding: 1.5rem 0;
   }
 
   .service-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .approach-pillars {
@@ -312,7 +307,7 @@ button {
 
   .instagram-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
+    gap: 0.65rem;
   }
 
   .about-grid {
@@ -322,32 +317,74 @@ button {
 
   .about-stats {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.25rem;
   }
 
   .journal-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  .form-group-row {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-
-  .modal-inquiry-card {
-    padding: 2rem 1.5rem;
+    gap: 2.25rem;
   }
 
   .final-cta-buttons {
     flex-direction: column;
     width: 100%;
+    gap: 1rem;
   }
 
   .btn-editorial-primary,
   .btn-editorial-secondary {
     width: 100%;
     justify-content: center;
+    padding: 1rem 1.5rem;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-credit {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Small Smartphone Optimization (480px and below) */
+@media (max-width: 480px) {
+  :root {
+    --container-padding: 1rem;
+  }
+
+  .brand-title {
+    font-size: 1.02rem;
+    letter-spacing: 0.1em;
+  }
+
+  .brand-sub {
+    font-size: 0.48rem;
+    letter-spacing: 0.14em;
+  }
+
+  .hero-title {
+    font-size: clamp(2.4rem, 11vw, 3.4rem);
+    line-height: 1.08;
+  }
+
+  .hero-subtitle {
+    font-size: 0.88rem;
+    margin-bottom: 2rem;
+  }
+
+  .service-row {
+    grid-template-columns: 32px 1fr 20px;
+    gap: 0.75rem;
+  }
+
+  .service-title {
+    font-size: 1.25rem;
   }
 }
 

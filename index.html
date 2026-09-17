@@ -119,16 +119,6 @@
 
       <!-- Navigation Actions -->
       <div class="nav-actions">
-        <!-- Ambient Soundscape Toggle (Tanpura Drone) -->
-        <button type="button" class="audio-toggle-btn" id="audioToggleBtn" aria-label="Play ambient soundscape (Tanpura drone)">
-          <span class="sound-waves" aria-hidden="true">
-            <span class="sound-bar"></span>
-            <span class="sound-bar"></span>
-            <span class="sound-bar"></span>
-          </span>
-          <span class="audio-label">SOUND OFF</span>
-        </button>
-
         <!-- Instagram Direct Link -->
         <a href="https://www.instagram.com/soulfulstories1/" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="Soulful Stories on Instagram (@soulfulstories1)">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -590,10 +580,12 @@
   <!-- B. Bespoke Booking Inquiry Modal -->
   <dialog id="inquiryModal" class="modal-inquiry-dialog">
     <div class="modal-inquiry-card">
-      <button type="button" class="modal-close-btn" id="closeInquiryBtn" style="position: absolute; top: 1.5rem; right: 1.5rem; color: #0c0b0a; border-color: rgba(18,17,16,0.2);" aria-label="Close commission inquiry dialog">✕</button>
+      <div class="modal-card-header">
+        <span class="eyebrow">COMMISSIONS</span>
+        <button type="button" class="modal-card-close" id="closeInquiryBtn" aria-label="Close commission inquiry dialog">✕</button>
+      </div>
       
-      <span class="eyebrow">COMMISSIONS</span>
-      <h2 id="inquiryHeading" style="font-family: var(--font-serif); font-size: 2.2rem; margin: 0.5rem 0 0.5rem 0; font-weight: 300;">
+      <h2 id="inquiryHeading" style="font-family: var(--font-serif); font-size: 2.2rem; margin: 0 0 0.5rem 0; font-weight: 300;">
         Start A Conversation
       </h2>
       <p style="font-size: var(--text-sm); color: var(--color-text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
@@ -668,9 +660,11 @@
   <!-- C. Privacy Policy Modal -->
   <dialog id="privacyModal" class="modal-inquiry-dialog">
     <div class="modal-legal-card">
-      <button type="button" class="modal-close-btn" id="closePrivacyBtn" style="position: absolute; top: 1.5rem; right: 1.5rem; color: #0c0b0a; border-color: rgba(18,17,16,0.2);" aria-label="Close Privacy Policy">✕</button>
-      <span class="eyebrow">LEGAL & TRUST</span>
-      <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin: 0.5rem 0 0.5rem 0; font-weight: 300;">
+      <div class="modal-card-header">
+        <span class="eyebrow">LEGAL & TRUST</span>
+        <button type="button" class="modal-card-close" id="closePrivacyBtn" aria-label="Close Privacy Policy">✕</button>
+      </div>
+      <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin: 0 0 0.5rem 0; font-weight: 300;">
         Privacy Policy
       </h2>
       <div class="legal-content">
@@ -692,9 +686,11 @@
   <!-- D. Terms of Commission Modal -->
   <dialog id="termsModal" class="modal-inquiry-dialog">
     <div class="modal-legal-card">
-      <button type="button" class="modal-close-btn" id="closeTermsBtn" style="position: absolute; top: 1.5rem; right: 1.5rem; color: #0c0b0a; border-color: rgba(18,17,16,0.2);" aria-label="Close Terms of Commission">✕</button>
-      <span class="eyebrow">COMMISSION AGREEMENT</span>
-      <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin: 0.5rem 0 0.5rem 0; font-weight: 300;">
+      <div class="modal-card-header">
+        <span class="eyebrow">COMMISSION AGREEMENT</span>
+        <button type="button" class="modal-card-close" id="closeTermsBtn" aria-label="Close Terms of Commission">✕</button>
+      </div>
+      <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin: 0 0 0.5rem 0; font-weight: 300;">
         Terms of Commission
       </h2>
       <div class="legal-content">

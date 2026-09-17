@@ -58,10 +58,18 @@ export function initContact() {
     }
   });
 
+  let returnToInquiryOnClose = false;
+
   // Privacy Modal Triggers
   openPrivacyLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
+      if (inquiryModal && inquiryModal.open) {
+        returnToInquiryOnClose = true;
+        inquiryModal.close();
+      } else {
+        returnToInquiryOnClose = false;
+      }
       if (privacyModal) {
         privacyModal.setAttribute('aria-modal', 'true');
         privacyModal.showModal();
@@ -74,7 +82,13 @@ export function initContact() {
   function closePrivacy() {
     if (privacyModal && privacyModal.open) {
       privacyModal.close();
-      document.body.style.overflow = '';
+      if (returnToInquiryOnClose && inquiryModal) {
+        returnToInquiryOnClose = false;
+        inquiryModal.showModal();
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
     }
   }
 
@@ -87,6 +101,12 @@ export function initContact() {
   openTermsLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
+      if (inquiryModal && inquiryModal.open) {
+        returnToInquiryOnClose = true;
+        inquiryModal.close();
+      } else {
+        returnToInquiryOnClose = false;
+      }
       if (termsModal) {
         termsModal.setAttribute('aria-modal', 'true');
         termsModal.showModal();
@@ -99,7 +119,13 @@ export function initContact() {
   function closeTerms() {
     if (termsModal && termsModal.open) {
       termsModal.close();
-      document.body.style.overflow = '';
+      if (returnToInquiryOnClose && inquiryModal) {
+        returnToInquiryOnClose = false;
+        inquiryModal.showModal();
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
     }
   }
 
