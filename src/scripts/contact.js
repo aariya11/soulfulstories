@@ -261,6 +261,6 @@ function sendWhatsAppMessage() {
   const message = `Namaste Soulful Stories! 🕊️\n\nI would love to inquire about commissioning your photography & filmmaking for:\n• Couple / Name: ${name}\n• Service: ${service}\n• Date: ${date}\n• Location: ${location}\n• Phone: ${phone}\n\nNotes / Story:\n${notes}\n\nLooking forward to connecting!`;
 
   const encoded = encodeURIComponent(message);
-  const whatsappUrl = `https://wa.me/919437000000?text=${encoded}`;
+  const whatsappUrl = `https://wa.me/917788847489?text=${encoded}`;
   window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
 }
