@@ -90,6 +90,20 @@ button {
   width: 100%;
 }
 
+/* Performance: Offscreen content deferred rendering (Instant initial paint) */
+.stories-section,
+.services-section,
+.approach-section,
+.instagram-section,
+.testimonials-section,
+.about-section,
+.journal-section,
+.final-cta-section,
+.site-footer {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 750px;
+}
+
 /* Scroll reveal animations (subtle, editorial) */
 .reveal-on-scroll {
   opacity: 0;

@@ -27,6 +27,10 @@
   <meta property="twitter:description" content="Your Love, Our Lens. Editorial wedding documentation in Odisha & worldwide." />
   <meta property="twitter:image" content="https://soulfulstories.vercel.app/assets/royal-bride.jpg" />
 
+  <!-- Critical LCP Image Preload (Responsive WebP) -->
+  <link rel="preload" as="image" href="/assets/royal-bride-mobile.webp" type="image/webp" media="(max-width: 640px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="/assets/royal-bride.webp" type="image/webp" media="(min-width: 641px)" fetchpriority="high" />
+
   <!-- Preconnect & Two Primary Font Families -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -198,14 +202,20 @@
     <!-- 2. HERO — CINEMATIC -->
     <section class="hero-section" id="hero" aria-label="Hero Introduction">
       <div class="hero-background-wrap">
-        <img 
-          src="/assets/royal-bride.jpg" 
-          alt="Regal Indian bride Ananya draped in ancestral crimson zardozi lehenga and handcrafted temple polki jewelry in Odisha" 
-          class="hero-bg-img"
-          fetchpriority="high"
-          width="677"
-          height="905"
-        />
+        <picture class="hero-bg-picture">
+          <source media="(max-width: 640px)" srcset="/assets/royal-bride-mobile.webp" type="image/webp" />
+          <source srcset="/assets/royal-bride.webp" type="image/webp" />
+          <img 
+            src="/assets/royal-bride.jpg" 
+            alt="Regal Indian bride Ananya draped in ancestral crimson zardozi lehenga and handcrafted temple polki jewelry in Odisha" 
+            class="hero-bg-img"
+            fetchpriority="high"
+            loading="eager"
+            decoding="sync"
+            width="677"
+            height="905"
+          />
+        </picture>
       </div>
       <div class="hero-overlay"></div>
       <div class="hero-grain"></div>
@@ -261,13 +271,17 @@
 
           <div class="intro-image-frame">
             <div class="intro-image-wrap">
-              <img 
-                src="/assets/haldi-celebration.jpg" 
-                alt="Joyful Haldi Snana celebration with bride and bridesmaids smiling in yellow silks, Cuttack, Odisha" 
-                loading="lazy"
-                width="645"
-                height="861"
-              />
+              <picture>
+                <source srcset="/assets/haldi-celebration.webp" type="image/webp" />
+                <img 
+                  src="/assets/haldi-celebration.jpg" 
+                  alt="Joyful Haldi Snana celebration with bride and bridesmaids smiling in yellow silks, Cuttack, Odisha" 
+                  loading="lazy"
+                  decoding="async"
+                  width="645"
+                  height="861"
+                />
+              </picture>
             </div>
             <div class="intro-caption">
               <span>Aarushi’s Haldi Snana</span>
@@ -345,13 +359,17 @@
           </div>
 
           <div class="approach-image-wrap">
-            <img 
-              src="/assets/emerald-portrait.png" 
-              alt="Dramatic fine-art bridal portrait in deep emerald green velvet drape and uncut polki necklace, Bhubaneswar, Odisha" 
-              loading="lazy"
-              width="687"
-              height="937"
-            />
+            <picture>
+              <source srcset="/assets/emerald-portrait.webp" type="image/webp" />
+              <img 
+                src="/assets/emerald-portrait.png" 
+                alt="Dramatic fine-art bridal portrait in deep emerald green velvet drape and uncut polki necklace, Bhubaneswar, Odisha" 
+                loading="lazy"
+                decoding="async"
+                width="687"
+                height="937"
+              />
+            </picture>
           </div>
         </div>
       </div>
@@ -411,14 +429,18 @@
       <div class="container">
         <div class="about-grid">
           <div class="about-portrait-wrap">
-            <img 
-              src="/assets/mithun-kumar.png" 
-              alt="Mithun Kumar, Founder and Lead Photographer of Soulful Stories" 
-              class="about-portrait-img"
-              loading="lazy"
-              width="780"
-              height="962"
-            />
+            <picture>
+              <source srcset="/assets/mithun-kumar.webp" type="image/webp" />
+              <img 
+                src="/assets/mithun-kumar.png" 
+                alt="Mithun Kumar, Founder and Lead Photographer of Soulful Stories" 
+                class="about-portrait-img"
+                loading="lazy"
+                decoding="async"
+                width="780"
+                height="962"
+              />
+            </picture>
             <div class="founder-signature-card">
               <div>
                 <h3 class="founder-name">MITHUN KUMAR</h3>
