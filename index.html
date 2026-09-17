@@ -7,29 +7,30 @@
   
   <!-- Primary Meta Tags -->
   <meta name="title" content="Soulful Stories | Luxury Wedding Photography & Films — Odisha, India" />
-  <meta name="description" content="Odisha's premier editorial wedding photography and filmmaking studio, founded by Mithun Kumar. Specializing in luxury wedding films, authentic rituals, pre-wedding love stories, and high-fashion portraiture." />
-  <meta name="keywords" content="Wedding Photographer Odisha, Wedding Photography Bhubaneswar, Wedding Videographer Odisha, Pre Wedding Photographer Odisha, Wedding Films Odisha, Luxury Indian Wedding Photographer, Mithun Kumar Photography" />
+  <meta name="description" content="Odisha's premier editorial wedding photography and filmmaking studio, founded by Mithun Kumar. Specializing in luxury wedding films, sacred Vedic rituals, pre-wedding love stories, and high-fashion portraiture across Bhubaneswar, Puri, and destination celebrations." />
+  <meta name="keywords" content="Wedding Photographer Odisha, Wedding Photography Bhubaneswar, Wedding Films Odisha, Wedding Videographer Odisha, Luxury Indian Wedding Photographer, Mithun Kumar Photography, Pre Wedding Photographer Odisha, Destination Wedding Odisha" />
   <meta name="author" content="Soulful Stories — Mithun Kumar" />
   <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://soulfulstories.vercel.app/" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://soulfulstories.in/" />
-  <meta property="og:title" content="Soulful Stories | Luxury Wedding Photography & Films — Odisha" />
-  <meta property="og:description" content="Your Love, Our Lens. One beautiful story. Award-winning wedding photography & cinematic films based in Odisha, India." />
-  <meta property="og:image" content="/assets/royal-bride.jpg" />
+  <meta property="og:url" content="https://soulfulstories.vercel.app/" />
+  <meta property="og:title" content="Soulful Stories | Luxury Wedding Photography & Films — Odisha, India" />
+  <meta property="og:description" content="Your Love, Our Lens. Editorial wedding documentation, cinematic films, and authentic rituals in Odisha and worldwide." />
+  <meta property="og:image" content="https://soulfulstories.vercel.app/assets/royal-bride.jpg" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://soulfulstories.in/" />
-  <meta property="twitter:title" content="Soulful Stories | Luxury Wedding Photography & Films" />
-  <meta property="twitter:description" content="Your Love, Our Lens. One beautiful story. Editorial wedding documentation in Odisha & worldwide." />
-  <meta property="twitter:image" content="/assets/royal-bride.jpg" />
+  <meta property="twitter:url" content="https://soulfulstories.vercel.app/" />
+  <meta property="twitter:title" content="Soulful Stories | Luxury Wedding Photography & Films — Odisha" />
+  <meta property="twitter:description" content="Your Love, Our Lens. Editorial wedding documentation in Odisha & worldwide." />
+  <meta property="twitter:image" content="https://soulfulstories.vercel.app/assets/royal-bride.jpg" />
 
-  <!-- Preconnect & Fonts -->
+  <!-- Preconnect & Two Primary Font Families -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;450;500;600&family=Pinyon+Script&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;450;500;600&display=swap" rel="stylesheet" />
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="/src/styles/main.css" />
@@ -40,15 +41,17 @@
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Soulful Stories",
-    "alternateName": "Soulful Stories Photography & Videography",
+    "alternateName": "Soulful Stories Photography & Films",
     "description": "Luxury wedding photography, wedding cinematography, pre-wedding narratives, and editorial portraiture based in Odisha, India.",
     "founder": {
       "@type": "Person",
       "name": "Mithun Kumar",
+      "jobTitle": "Founder & Lead Photographer",
       "url": "https://www.instagram.com/mithun_kumar_04/"
     },
-    "image": "https://soulfulstories.in/assets/royal-bride.jpg",
+    "image": "https://soulfulstories.vercel.app/assets/royal-bride.jpg",
     "telephone": "+91-94370-00000",
+    "email": "stories.soulful@gmail.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Bhubaneswar",
@@ -61,17 +64,27 @@
       "longitude": "85.8245"
     },
     "priceRange": "$$$$",
-    "url": "https://soulfulstories.in",
+    "url": "https://soulfulstories.vercel.app",
     "sameAs": [
       "https://www.instagram.com/soulfulstories1/",
       "https://www.instagram.com/mithun_kumar_04/"
+    ],
+    "areaServed": [
+      { "@type": "City", "name": "Bhubaneswar" },
+      { "@type": "City", "name": "Puri" },
+      { "@type": "City", "name": "Cuttack" },
+      { "@type": "AdministrativeArea", "name": "Odisha" },
+      { "@type": "Country", "name": "India" }
     ]
   }
   </script>
 </head>
 <body>
 
-  <!-- Bespoke Editorial Cursor (Desktop) -->
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Bespoke Editorial Cursor (Desktop Pointer Only) -->
   <div class="custom-cursor" aria-hidden="true"></div>
   <div class="custom-cursor-follower" aria-hidden="true"></div>
 
@@ -80,7 +93,7 @@
     <img src="" alt="Service preview" />
   </div>
 
-  <!-- 1. Minimal Navigation -->
+  <!-- 1. Minimal Navigation Header -->
   <header class="site-header is-transparent-hero" id="siteHeader">
     <div class="nav-container">
       <a href="#hero" class="brand-link" aria-label="Soulful Stories Home">
@@ -89,7 +102,7 @@
       </a>
 
       <!-- Desktop Navigation -->
-      <nav aria-label="Main Navigation">
+      <nav aria-label="Main Navigation" id="mainNav">
         <ul class="nav-menu">
           <li><a href="#work" class="nav-link">WORK</a></li>
           <li><a href="#about" class="nav-link">ABOUT</a></li>
@@ -102,8 +115,8 @@
 
       <!-- Navigation Actions -->
       <div class="nav-actions">
-        <!-- Ambient Soundscape Toggle -->
-        <button class="audio-toggle-btn" id="audioToggleBtn" aria-label="Play Ambient Sound">
+        <!-- Ambient Soundscape Toggle (Tanpura Drone) -->
+        <button type="button" class="audio-toggle-btn" id="audioToggleBtn" aria-label="Play ambient soundscape (Tanpura drone)">
           <span class="sound-waves" aria-hidden="true">
             <span class="sound-bar"></span>
             <span class="sound-bar"></span>
@@ -113,7 +126,7 @@
         </button>
 
         <!-- Instagram Direct Link -->
-        <a href="https://www.instagram.com/soulfulstories1/" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="Soulful Stories on Instagram">
+        <a href="https://www.instagram.com/soulfulstories1/" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="Soulful Stories on Instagram (@soulfulstories1)">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -121,14 +134,14 @@
           </svg>
         </a>
 
-        <!-- Inquire Pill Button -->
-        <button class="btn-inquire-pill open-inquiry-trigger">
+        <!-- Inquire Header Action Button -->
+        <button type="button" class="btn-inquire-pill open-inquiry-trigger" aria-label="Open commission inquiry form">
           INQUIRE
         </button>
 
         <!-- Mobile Menu Trigger -->
-        <button class="mobile-menu-trigger" id="mobileMenuTrigger" aria-label="Open mobile menu">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <button type="button" class="mobile-menu-trigger" id="mobileMenuTrigger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNavDrawer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <line x1="3" y1="8" x2="21" y2="8"></line>
             <line x1="3" y1="16" x2="21" y2="16"></line>
           </svg>
@@ -139,7 +152,7 @@
 
   <!-- Mobile Navigation Drawer -->
   <div id="mobileNavDrawer" class="mobile-nav-drawer" aria-hidden="true">
-    <button class="mobile-nav-drawer-close" id="closeMobileNav" aria-label="Close mobile navigation">✕</button>
+    <button type="button" class="mobile-nav-drawer-close" id="closeMobileNav" aria-label="Close navigation menu">✕</button>
     <div>
       <span class="caption-editorial" style="color: rgba(255,255,255,0.4); display: block; margin-bottom: 2rem;">
         SOULFUL STORIES — NAVIGATION
@@ -159,7 +172,7 @@
         </li>
         <li class="mobile-nav-item">
           <span class="mobile-nav-num">04</span>
-          <a href="#approach" class="mobile-nav-link">APPROACH</a>
+          <a href="#approach" class="mobile-nav-link">PHILOSOPHY</a>
         </li>
         <li class="mobile-nav-item">
           <span class="mobile-nav-num">05</span>
@@ -181,13 +194,13 @@
     </div>
   </div>
 
-  <main>
+  <main id="main-content">
     <!-- 2. HERO — CINEMATIC -->
-    <section class="hero-section" id="hero">
+    <section class="hero-section" id="hero" aria-label="Hero Introduction">
       <div class="hero-background-wrap">
         <img 
           src="/assets/royal-bride.jpg" 
-          alt="Regal Indian bride draped in heirloom Sambalpuri crimson and temple gold jewelry" 
+          alt="Regal Indian bride Ananya draped in ancestral crimson zardozi lehenga and handcrafted temple polki jewelry in Odisha" 
           class="hero-bg-img"
           fetchpriority="high"
           width="677"
@@ -199,29 +212,29 @@
 
       <div class="hero-content">
         <div class="eyebrow hero-eyebrow">
-          SOULFUL STORIES — ODISHA, INDIA
+          SOULFUL STORIES · ODISHA, INDIA
         </div>
 
         <h1 class="hero-title">
-          “Stories worth<br />remembering.”
+          Stories Worth<br />Remembering
         </h1>
 
         <div class="hero-subtitle">
-          Wedding Photography & Films
+          Luxury Wedding Photography & Films
         </div>
 
         <div class="hero-actions">
-          <a href="#work" class="link-editorial link-editorial-light">
-            VIEW OUR WORK →
-          </a>
-          <button class="link-editorial link-editorial-light open-inquiry-trigger" style="background: none; border: none; cursor: pointer;">
+          <button type="button" class="btn-hero-primary open-inquiry-trigger">
             CHECK DATE AVAILABILITY →
           </button>
+          <a href="#work" class="hero-link-secondary">
+            VIEW OUR WORK →
+          </a>
         </div>
 
         <div class="hero-footer-meta">
           <div>COMMISSIONS ACROSS BHUBANESWAR, PURI & WORLDWIDE</div>
-          <a href="#intro" class="hero-scroll-indicator">
+          <a href="#intro" class="hero-scroll-indicator" aria-label="Scroll to introduction story">
             <span>SCROLL</span>
             <span class="scroll-line"></span>
           </a>
@@ -230,19 +243,19 @@
     </section>
 
     <!-- 3. INTRODUCTION SECTION -->
-    <section class="intro-section" id="intro">
+    <section class="intro-section" id="intro" aria-label="The Story">
       <div class="container">
         <div class="intro-grid">
           <div class="intro-content">
             <span class="eyebrow">THE STORY</span>
             <h2 class="intro-heading">
-              “Your Love,<br />Our Lens.<br />One Beautiful Story.”
+              Your Love.<br />Our Lens.
             </h2>
             <p class="intro-body">
-              We document the quiet glances, loud celebrations, fleeting emotions and beautiful imperfections that make every story uniquely yours.
+              We document the quiet glances, vibrant rituals, fleeting tears, and unscripted family celebrations that make every wedding unique to its roots.
             </p>
             <a href="#approach" class="link-editorial">
-              DISCOVER SOULFUL STORIES →
+              OUR PHILOSOPHY →
             </a>
           </div>
 
@@ -250,14 +263,14 @@
             <div class="intro-image-wrap">
               <img 
                 src="/assets/haldi-celebration.jpg" 
-                alt="Vibrant Haldi celebration with bride and bridesmaids in yellow silks, Odisha" 
+                alt="Joyful Haldi Snana celebration with bride and bridesmaids smiling in yellow silks, Cuttack, Odisha" 
                 loading="lazy"
                 width="645"
                 height="861"
               />
             </div>
             <div class="intro-caption">
-              <span>Joyous Sisterhood</span>
+              <span>Aarushi’s Haldi Snana</span>
               <span>Cuttack, Odisha</span>
             </div>
           </div>
@@ -266,7 +279,7 @@
     </section>
 
     <!-- 4. FEATURED WORK (SELECTED STORIES) -->
-    <section class="stories-section" id="work">
+    <section class="stories-section" id="work" aria-label="Featured Portfolio">
       <div class="container">
         <div class="section-header-editorial">
           <div>
@@ -274,12 +287,12 @@
             <h2 class="section-title">SELECTED STORIES</h2>
           </div>
 
-          <div class="gallery-filter-bar" role="tablist" aria-label="Portfolio filters">
-            <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">ALL STORIES</button>
-            <button class="filter-btn" data-filter="wedding" role="tab" aria-selected="false">WEDDINGS</button>
-            <button class="filter-btn" data-filter="pre-wedding" role="tab" aria-selected="false">PRE-WEDDING</button>
-            <button class="filter-btn" data-filter="film" role="tab" aria-selected="false">WEDDING FILMS</button>
-            <button class="filter-btn" data-filter="portrait" role="tab" aria-selected="false">FASHION & PORTRAITS</button>
+          <div class="gallery-filter-bar" role="tablist" aria-label="Portfolio category filters">
+            <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true">ALL STORIES</button>
+            <button type="button" class="filter-btn" data-filter="wedding" role="tab" aria-selected="false">WEDDINGS</button>
+            <button type="button" class="filter-btn" data-filter="pre-wedding" role="tab" aria-selected="false">PRE-WEDDING</button>
+            <button type="button" class="filter-btn" data-filter="film" role="tab" aria-selected="false">WEDDING FILMS</button>
+            <button type="button" class="filter-btn" data-filter="portrait" role="tab" aria-selected="false">FASHION & PORTRAITS</button>
           </div>
         </div>
 
@@ -289,7 +302,7 @@
     </section>
 
     <!-- 5. SERVICES (WHAT WE DO) -->
-    <section class="services-section" id="services">
+    <section class="services-section" id="services" aria-label="Studio Disciplines">
       <div class="container">
         <div style="margin-bottom: 2.5rem;">
           <span class="eyebrow">DISCIPLINES</span>
@@ -302,31 +315,30 @@
     </section>
 
     <!-- 6. THE SOULFUL APPROACH (DEEP BLACK SECTION) -->
-    <section class="approach-section" id="approach">
+    <section class="approach-section" id="approach" aria-label="Studio Philosophy">
       <div class="container">
         <div class="approach-grid">
           <div>
             <span class="eyebrow eyebrow-dark">STUDIO PHILOSOPHY</span>
-            <h2 class="approach-headline-part1">“WE DON'T JUST</h2>
-            <h2 class="approach-headline-part2">CAPTURE MOMENTS.”</h2>
-            <div style="font-family: var(--font-serif); font-size: clamp(1.8rem, 3.2vw, 2.75rem); color: rgba(255,255,255,0.92); margin-bottom: 2rem; line-height: 1.15;">
-              “WE PRESERVE HOW THEY FELT.”
-            </div>
+            <h2 class="approach-statement">
+              <span class="approach-statement-muted">We don't just capture moments.</span>
+              We preserve how they felt.
+            </h2>
             <p class="approach-philosophy">
-              From the sacred Vedic chants at dawn to the tearful Bidai beneath the starlight, our lens honors the dignity of tradition and the wild purity of genuine emotion. No forced poses. No artificial smiles. Just the poetry of your real moments, rooted in the timeless heritage of Odisha.
+              From the sacred Vedic chants at dawn to the quiet Bidai beneath the starlight, our lens honors ritual dignity and authentic human connection. No forced poses. No artificial smiles. Just the honest poetry of your real moments, rooted in the heritage of Odisha.
             </p>
 
             <div class="approach-pillars">
               <div>
                 <h3 class="pillar-title">Sacred Dignity</h3>
                 <p class="pillar-desc">
-                  Reverence for Vedic rituals, ancestral temple ceremonies, and the intricate heirloom fabrics woven across our state.
+                  Reverence for Vedic vows, ancestral temple rituals, and handloom silks woven across our heritage.
                 </p>
               </div>
               <div>
                 <h3 class="pillar-title">Unposed Stillness</h3>
                 <p class="pillar-desc">
-                  Sensitivity to the unscripted pauses — the trembling hands, the held breath, and the private laughter shared between two souls.
+                  Sensitivity to the unscripted pauses, held breath, and private laughter shared between two souls.
                 </p>
               </div>
             </div>
@@ -335,7 +347,7 @@
           <div class="approach-image-wrap">
             <img 
               src="/assets/emerald-portrait.png" 
-              alt="Dramatic fine-art bridal portrait in deep emerald velvet and uncut polki, Bhubaneswar" 
+              alt="Dramatic fine-art bridal portrait in deep emerald green velvet drape and uncut polki necklace, Bhubaneswar, Odisha" 
               loading="lazy"
               width="687"
               height="937"
@@ -346,7 +358,7 @@
     </section>
 
     <!-- 7. INSTAGRAM / SOCIAL PROOF (FROM OUR LENS) -->
-    <section class="instagram-section" id="instagram">
+    <section class="instagram-section" id="instagram" aria-label="Visual Diary">
       <div class="container">
         <div class="insta-header-wrap">
           <div>
@@ -354,7 +366,7 @@
             <h2 class="section-title">FROM OUR LENS</h2>
           </div>
 
-          <a href="https://www.instagram.com/soulfulstories1/" target="_blank" rel="noopener noreferrer" class="insta-handle">
+          <a href="https://www.instagram.com/soulfulstories1/" target="_blank" rel="noopener noreferrer" class="insta-handle" aria-label="Follow Soulful Stories on Instagram">
             <span>@SOULFULSTORIES1</span>
             <span style="font-size: 1.1rem;">↗</span>
           </a>
@@ -375,27 +387,27 @@
     </section>
 
     <!-- 8. TESTIMONIALS (EDITORIAL MINIMAL) -->
-    <section class="testimonials-section">
+    <section class="testimonials-section" aria-label="Client Reflections">
       <div class="container">
         <div class="testimonials-container">
           <span class="eyebrow" style="justify-content: center;">KIND WORDS</span>
           <h2 class="testimonials-lead-quote">
-            “Beautiful things happen when you trust the right people with your memories.”
+            Beautiful celebrations created when families trust an honest, observational lens.
           </h2>
 
           <!-- Slider Container populated by main.js -->
           <div class="testimonials-slider"></div>
 
           <div class="testimonial-controls">
-            <button class="test-btn" id="prevTestimonial" aria-label="Previous testimonial">←</button>
-            <button class="test-btn" id="nextTestimonial" aria-label="Next testimonial">→</button>
+            <button type="button" class="test-btn" id="prevTestimonial" aria-label="Previous testimonial">←</button>
+            <button type="button" class="test-btn" id="nextTestimonial" aria-label="Next testimonial">→</button>
           </div>
         </div>
       </div>
     </section>
 
     <!-- 9. ABOUT THE STUDIO & FOUNDER -->
-    <section class="about-section" id="about">
+    <section class="about-section" id="about" aria-label="About the Atelier">
       <div class="container">
         <div class="about-grid">
           <div class="about-portrait-wrap">
@@ -410,9 +422,9 @@
             <div class="founder-signature-card">
               <div>
                 <h3 class="founder-name">MITHUN KUMAR</h3>
-                <div class="founder-role">Founder / Lead Photographer</div>
+                <div class="founder-role">Founder & Lead Photographer</div>
               </div>
-              <a href="https://www.instagram.com/mithun_kumar_04/" target="_blank" rel="noopener noreferrer" class="caption-editorial" style="text-decoration: none; color: inherit;">
+              <a href="https://www.instagram.com/mithun_kumar_04/" target="_blank" rel="noopener noreferrer" class="caption-editorial" style="text-decoration: none; color: inherit;" aria-label="Mithun Kumar on Instagram (@mithun_kumar_04)">
                 @MITHUN_KUMAR_04 ↗
               </a>
             </div>
@@ -421,27 +433,27 @@
           <div>
             <span class="eyebrow">THE ATELIER</span>
             <h2 class="about-heading">
-              EVERY STORY<br />DESERVES TO BE<br />REMEMBERED.
+              Every story deserves<br />to be remembered.
             </h2>
             <p class="about-body-lead">
-              Soulful Stories is an Odisha-based boutique photography and filmmaking studio committed to capturing weddings, portraits, and pre-wedding stories with editorial distinction.
+              Soulful Stories is an Odisha-based boutique photography and filmmaking studio committed to capturing weddings, portraits, and pre-wedding narratives with quiet editorial distinction.
             </p>
             <p class="about-body-quiet">
-              Born from a reverence for the ancient temple architectures of Bhubaneswar, the golden sunlines of Puri, and the rhythmic warmth of Indian family celebration, we bring a cinematic sensibility to documentation. We treat weddings not as events to be directed, but as living legacies to be preserved with artistic grace.
+              Founded by Mithun Kumar, our visual language is shaped by the ancient stone colonnades of Bhubaneswar, the coastal dawn along the Bay of Bengal, and the rhythmic warmth of Indian family life. We approach each wedding not as an event to be directed, but as an heirloom to be preserved with artistic grace.
             </p>
 
             <div class="about-stats">
               <div>
                 <div class="stat-num">150+</div>
-                <div class="stat-label">Weddings Documented</div>
+                <div class="stat-label">Weddings Documented Across Odisha & India</div>
               </div>
               <div>
-                <div class="stat-num">12+</div>
-                <div class="stat-label">Heritage Cities Covered</div>
+                <div class="stat-num">Boutique</div>
+                <div class="stat-label">Strictly Limited Commissions Per Season</div>
               </div>
               <div>
-                <div class="stat-num">100%</div>
-                <div class="stat-label">Unscripted Emotion</div>
+                <div class="stat-num">Documentary</div>
+                <div class="stat-label">Natural Light & Unforced Emotional Truth</div>
               </div>
             </div>
           </div>
@@ -450,7 +462,7 @@
     </section>
 
     <!-- 10. JOURNAL SECTION -->
-    <section class="journal-section" id="journal">
+    <section class="journal-section" id="journal" aria-label="Editorial Perspectives">
       <div class="container">
         <div class="section-header-editorial">
           <div>
@@ -458,7 +470,7 @@
             <h2 class="section-title">THE JOURNAL</h2>
           </div>
           <p class="caption-editorial" style="max-width: 320px;">
-            Insights on Odia weddings, film aesthetics, and celebrating love along the Bay of Bengal.
+            Reflections on Odia wedding traditions, cinematographic aesthetics, and coastal light.
           </p>
         </div>
 
@@ -468,22 +480,22 @@
     </section>
 
     <!-- 11. FINAL CTA (LARGE WHITE SECTION) -->
-    <section class="final-cta-section" id="contact">
+    <section class="final-cta-section" id="contact" aria-label="Begin Commission">
       <div class="container final-cta-container">
         <span class="eyebrow" style="justify-content: center;">COMMISSIONS & DATES</span>
         <h2 class="final-cta-headline">
-          “LET'S CREATE<br />SOMETHING<br />TIMELESS.”
+          Let's Begin the<br />Conversation.
         </h2>
         <p class="final-cta-desc">
-          Planning a wedding, pre-wedding or portrait session in Odisha or beyond? Let's begin the conversation.
+          Planning a wedding, pre-wedding, or bespoke portrait commission in Odisha or worldwide? We would love to hear your story.
         </p>
 
         <div class="final-cta-buttons">
-          <button class="btn-editorial-primary open-inquiry-trigger">
-            START A CONVERSATION →
+          <button type="button" class="btn-editorial-primary open-inquiry-trigger">
+            CHECK DATE AVAILABILITY →
           </button>
-          <a href="https://www.instagram.com/soulfulstories1/" target="_blank" rel="noopener noreferrer" class="btn-editorial-secondary">
-            INSTAGRAM @SOULFULSTORIES1 →
+          <a href="https://wa.me/919437000000" target="_blank" rel="noopener noreferrer" class="btn-editorial-secondary" aria-label="Direct inquiry via WhatsApp">
+            WHATSAPP DIRECT →
           </a>
         </div>
       </div>
@@ -491,15 +503,15 @@
   </main>
 
   <!-- 12. FOOTER (MINIMAL BLACK) -->
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
       <div class="footer-top">
         <div>
           <div class="footer-brand">SOULFUL STORIES</div>
-          <div class="footer-tagline">Photography & Videography</div>
+          <div class="footer-tagline">Photography & Films · Odisha, India</div>
           <p class="footer-location">
             Based in Bhubaneswar, Odisha, India.<br />
-            Documenting love stories across India and available for destination weddings worldwide.
+            Documenting celebrations across India and available for destination weddings worldwide.
           </p>
         </div>
 
@@ -513,12 +525,14 @@
         </div>
 
         <div>
-          <div class="footer-col-title">FOLLOW & CONNECT</div>
+          <div class="footer-col-title">EXPLORE & LEGAL</div>
           <ul class="footer-links">
-            <li><a href="https://www.instagram.com/soulfulstories1/" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram (@soulfulstories1)</a></li>
-            <li><a href="https://www.instagram.com/mithun_kumar_04/" target="_blank" rel="noopener noreferrer" class="footer-link">Founder (@mithun_kumar_04)</a></li>
-            <li><a href="#work" class="footer-link">View Portfolio</a></li>
-            <li><a href="#journal" class="footer-link">Read Journal</a></li>
+            <li><a href="#work" class="footer-link">Selected Stories</a></li>
+            <li><a href="#about" class="footer-link">About Mithun Kumar</a></li>
+            <li><a href="#services" class="footer-link">Disciplines & Services</a></li>
+            <li><a href="#journal" class="footer-link">The Journal</a></li>
+            <li><button type="button" class="footer-link open-privacy-trigger" style="text-align: left; padding: 0; background: none; border: none; cursor: pointer;">Privacy Policy</button></li>
+            <li><button type="button" class="footer-link open-terms-trigger" style="text-align: left; padding: 0; background: none; border: none; cursor: pointer;">Terms of Commission</button></li>
           </ul>
         </div>
       </div>
@@ -533,10 +547,10 @@
               <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
             </svg>
             <span>WEBSITE BY <strong>@__.ARUNFX.__</strong></span>
-            <span style="font-size: 0.75rem;">↗</span>
+            <span style="font-size: 0.75rem; line-height: 1;">↗</span>
           </a>
         </div>
-        <div>FOUNDED BY MITHUN KUMAR • ODISHA, INDIA</div>
+        <div>FOUNDED BY MITHUN KUMAR · ODISHA, INDIA</div>
       </div>
     </div>
   </footer>
@@ -546,7 +560,7 @@
   <!-- A. Project Story Lightbox Modal -->
   <dialog id="storyLightbox">
     <div class="modal-lightbox-content">
-      <button class="modal-close-btn" id="closeLightboxBtn" aria-label="Close project lightbox">✕</button>
+      <button type="button" class="modal-close-btn" id="closeLightboxBtn" aria-label="Close project lightbox">✕</button>
       <div id="lightboxDynamicContent"></div>
     </div>
   </dialog>
@@ -554,35 +568,35 @@
   <!-- B. Bespoke Booking Inquiry Modal -->
   <dialog id="inquiryModal" class="modal-inquiry-dialog">
     <div class="modal-inquiry-card">
-      <button class="modal-close-btn" id="closeInquiryBtn" style="position: absolute; top: 1.5rem; right: 1.5rem; color: #0c0b0a; border-color: rgba(18,17,16,0.2);" aria-label="Close inquiry dialog">✕</button>
+      <button type="button" class="modal-close-btn" id="closeInquiryBtn" style="position: absolute; top: 1.5rem; right: 1.5rem; color: #0c0b0a; border-color: rgba(18,17,16,0.2);" aria-label="Close commission inquiry dialog">✕</button>
       
-      <span class="eyebrow">INQUIRE</span>
-      <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin: 0.5rem 0 0.5rem 0;">
+      <span class="eyebrow">COMMISSIONS</span>
+      <h2 id="inquiryHeading" style="font-family: var(--font-serif); font-size: 2.2rem; margin: 0.5rem 0 0.5rem 0; font-weight: 300;">
         Start A Conversation
       </h2>
-      <p style="font-size: var(--text-sm); color: var(--color-text-secondary); margin-bottom: 1.5rem;">
-        Tell us about your celebration, your vision, and what draws you to our lens.
+      <p style="font-size: var(--text-sm); color: var(--color-text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+        Tell us about your celebration, your aesthetic vision, and what draws you to our lens.
       </p>
 
-      <form id="inquiryForm" class="inquiry-form">
+      <form id="inquiryForm" class="inquiry-form" novalidate>
         <div class="form-group-row">
           <div class="form-field">
             <label class="form-label" for="inquiryName">Your Name(s) *</label>
-            <input type="text" id="inquiryName" class="form-input" placeholder="e.g. Radhika & Manav" required />
+            <input type="text" id="inquiryName" class="form-input" placeholder="e.g. Radhika & Manav" required autocomplete="name" />
           </div>
           <div class="form-field">
             <label class="form-label" for="inquiryPhone">Phone / WhatsApp *</label>
-            <input type="tel" id="inquiryPhone" class="form-input" placeholder="+91 98765 43210" required />
+            <input type="tel" id="inquiryPhone" class="form-input" placeholder="+91 98765 43210" required autocomplete="tel" />
           </div>
         </div>
 
         <div class="form-group-row">
           <div class="form-field">
             <label class="form-label" for="inquiryEmail">Email Address *</label>
-            <input type="email" id="inquiryEmail" class="form-input" placeholder="name@domain.com" required />
+            <input type="email" id="inquiryEmail" class="form-input" placeholder="name@domain.com" required autocomplete="email" />
           </div>
           <div class="form-field">
-            <label class="form-label" for="inquiryDate">Event Date *</label>
+            <label class="form-label" for="inquiryDate">Celebration Date *</label>
             <input type="date" id="inquiryDate" class="form-input" required />
           </div>
         </div>
@@ -590,10 +604,10 @@
         <div class="form-group-row">
           <div class="form-field">
             <label class="form-label" for="inquiryLocation">Location / City *</label>
-            <input type="text" id="inquiryLocation" class="form-input" placeholder="e.g. Bhubaneswar, Puri, Destination" required />
+            <input type="text" id="inquiryLocation" class="form-input" placeholder="e.g. Bhubaneswar, Puri, Cuttack, Destination" required />
           </div>
           <div class="form-field">
-            <label class="form-label" for="inquiryService">Service Required *</label>
+            <label class="form-label" for="inquiryService">Discipline Required *</label>
             <select id="inquiryService" class="form-select" required>
               <option value="Wedding Films & Photography">Wedding Films & Photography (Complete)</option>
               <option value="Wedding Photography">Wedding Photography</option>
@@ -605,23 +619,73 @@
         </div>
 
         <div class="form-field">
-          <label class="form-label" for="inquiryNotes">Tell Us About Your Story & Plans</label>
-          <textarea id="inquiryNotes" class="form-textarea" placeholder="Venues, estimated guest count, traditions you are celebrating..."></textarea>
+          <label class="form-label" for="inquiryNotes">Tell Us About Your Celebration & Traditions</label>
+          <textarea id="inquiryNotes" class="form-textarea" placeholder="Venues, estimated guest count, family traditions you are celebrating..."></textarea>
         </div>
+
+        <p class="form-consent-text">
+          By submitting this inquiry, you agree that Soulful Stories may use the information provided to respond to your booking inquiry. We respect your privacy and never sell or share client data. View our <a href="#" class="open-privacy-trigger">Privacy Policy</a>.
+        </p>
 
         <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem;">
           <button type="submit" class="btn-editorial-primary" style="justify-content: center; width: 100%;">
-            SUBMIT COMMISSION REQUEST →
+            SUBMIT COMMISSION INQUIRY →
           </button>
           
           <button type="button" id="whatsappSendBtn" class="whatsapp-action-pill">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.062-1.109-.071-.24-.077-.55-.183-.949-.356-1.693-.734-2.791-2.464-2.875-2.577-.085-.114-.687-.914-.687-1.743 0-.829.434-1.238.588-1.408.155-.17.339-.212.453-.212.113 0 .226.002.325.006.104.005.244-.04.382.291.144.344.494 1.203.537 1.29.043.087.072.188.014.303-.058.115-.088.188-.174.288-.086.1-.181.224-.259.3-.086.086-.176.18-.076.353.1.172.443.731.951 1.184.654.582 1.205.762 1.378.848.173.086.275.072.378-.045.103-.117.443-.516.562-.693.118-.177.237-.148.397-.088.161.06 1.019.48 1.194.567.175.087.291.13.334.203.043.073.043.421-.101.826z"/>
             </svg>
             QUICK CONNECT VIA WHATSAPP →
           </button>
         </div>
       </form>
+    </div>
+  </dialog>
+
+  <!-- C. Privacy Policy Modal -->
+  <dialog id="privacyModal" class="modal-inquiry-dialog">
+    <div class="modal-legal-card">
+      <button type="button" class="modal-close-btn" id="closePrivacyBtn" style="position: absolute; top: 1.5rem; right: 1.5rem; color: #0c0b0a; border-color: rgba(18,17,16,0.2);" aria-label="Close Privacy Policy">✕</button>
+      <span class="eyebrow">LEGAL & TRUST</span>
+      <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin: 0.5rem 0 0.5rem 0; font-weight: 300;">
+        Privacy Policy
+      </h2>
+      <div class="legal-content">
+        <p><strong>Last Updated:</strong> February 2025</p>
+        <h3>1. Information We Collect</h3>
+        <p>Soulful Stories collects only personal information provided voluntarily via our commission inquiry form and direct client communications (such as names, phone numbers, email addresses, event dates, celebration locations, and aesthetic notes). We do not use third-party advertising cookies or trackers.</p>
+        <h3>2. How Your Information Is Used</h3>
+        <p>Information submitted is used solely to assess date availability, respond to client commission requests, provide bespoke pricing proposals, and fulfill photographic and cinematic production contracts.</p>
+        <h3>3. Data Confidentiality & Sharing</h3>
+        <p>We treat your personal details, wedding itineraries, and private moments with strict confidentiality. We never sell, rent, or trade your personal information to third parties.</p>
+        <h3>4. Image Copyright & Client Privacy</h3>
+        <p>We respect family privacy. Any portfolio exhibition of client photographs or films is conducted in mutual agreement and respect for the couple's celebration. Clients may request private non-disclosure commissions upon contract signing.</p>
+        <h3>5. Contact for Inquiries</h3>
+        <p>If you have questions regarding our privacy practices or wish to have your inquiry information removed from our records, please contact us at <a href="mailto:stories.soulful@gmail.com">stories.soulful@gmail.com</a>.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- D. Terms of Commission Modal -->
+  <dialog id="termsModal" class="modal-inquiry-dialog">
+    <div class="modal-legal-card">
+      <button type="button" class="modal-close-btn" id="closeTermsBtn" style="position: absolute; top: 1.5rem; right: 1.5rem; color: #0c0b0a; border-color: rgba(18,17,16,0.2);" aria-label="Close Terms of Commission">✕</button>
+      <span class="eyebrow">COMMISSION AGREEMENT</span>
+      <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin: 0.5rem 0 0.5rem 0; font-weight: 300;">
+        Terms of Commission
+      </h2>
+      <div class="legal-content">
+        <p><strong>Studio Practice:</strong> Soulful Stories · Mithun Kumar</p>
+        <h3>1. Commission Reservation</h3>
+        <p>A date is reserved exclusively upon receipt of a signed commission agreement and the initial reservation retainer. Because Soulful Stories accepts a limited number of celebrations each season, dates cannot be held tentatively without confirmation.</p>
+        <h3>2. Creative Autonomy & Documentary Style</h3>
+        <p>Soulful Stories is commissioned for our distinct editorial, unposed, and fine-art documentary perspective. While client ritual notes and family portraits are diligently honored, creative direction, colour-grading, and framing remain under our artistic discretion.</p>
+        <h3>3. Delivery Timelines</h3>
+        <p>Signature teasers and highlights are typically delivered within 2–3 weeks of your celebration. The complete high-resolution colour-graded master image archive and cinematic films require meticulous craft and are delivered within 8–12 weeks.</p>
+        <h3>4. Destination & Travel Logistics</h3>
+        <p>For celebrations outside Bhubaneswar and Cuttack, travel, accommodation, and local transfers for the production crew are arranged in consultation with the client.</p>
+      </div>
     </div>
   </dialog>
 

@@ -82,6 +82,11 @@
   text-decoration: none;
   color: inherit;
   display: block;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  width: 100%;
 }
 
 .story-col-7 {

@@ -4,6 +4,8 @@ import { initServices } from './services.js';
 import { initContact } from './contact.js';
 import { TESTIMONIALS_DATA, JOURNAL_DATA, INSTAGRAM_FEED } from './data.js';
 
+let lastJournalTrigger = null;
+
 document.addEventListener('DOMContentLoaded', () => {
   initGallery();
   initServices();
@@ -32,29 +34,26 @@ function initHeaderScroll() {
   function updateHeader() {
     const scrollY = window.scrollY;
 
-    // Is in hero?
     const heroBottom = heroSection ? heroSection.offsetTop + heroSection.offsetHeight : 600;
-    if (scrollY < heroBottom - 80) {
+    if (scrollY < heroBottom - 90) {
       header.classList.add('is-transparent-hero');
     } else {
       header.classList.remove('is-transparent-hero');
     }
 
-    // Scrolled class
-    if (scrollY > 50) {
+    if (scrollY > 40) {
       header.classList.add('is-scrolled');
     } else {
       header.classList.remove('is-scrolled');
     }
 
-    // Check if over dark approach section
     if (approachSection) {
-      const approachTop = approachSection.offsetTop - 60;
-      const approachBottom = approachSection.offsetTop + approachSection.offsetHeight - 60;
+      const approachTop = approachSection.offsetTop - 70;
+      const approachBottom = approachSection.offsetTop + approachSection.offsetHeight - 70;
       if (scrollY >= approachTop && scrollY <= approachBottom) {
         header.classList.add('on-dark');
         header.classList.add('is-transparent-hero');
-      } else if (scrollY >= heroBottom - 80) {
+      } else if (scrollY >= heroBottom - 90) {
         header.classList.remove('on-dark');
       }
     }
@@ -65,7 +64,7 @@ function initHeaderScroll() {
 }
 
 /* ==========================================================================
-   Mobile Menu Drawer
+   Mobile Menu Drawer (Accessible)
    ========================================================================== */
 function initMobileDrawer() {
   const trigger = document.getElementById('mobileMenuTrigger');
@@ -77,12 +76,18 @@ function initMobileDrawer() {
 
   function openDrawer() {
     drawer.classList.add('is-open');
+    drawer.setAttribute('aria-hidden', 'false');
+    trigger.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
+    closeBtn?.focus();
   }
 
   function closeDrawer() {
     drawer.classList.remove('is-open');
+    drawer.setAttribute('aria-hidden', 'true');
+    trigger.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
+    trigger.focus();
   }
 
   trigger.addEventListener('click', openDrawer);
@@ -90,6 +95,12 @@ function initMobileDrawer() {
 
   drawerLinks?.forEach(link => {
     link.addEventListener('click', closeDrawer);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
+      closeDrawer();
+    }
   });
 }
 
@@ -114,7 +125,7 @@ function initCustomCursor() {
     mouseY = e.clientY;
     cursorDot.style.left = `${mouseX}px`;
     cursorDot.style.top = `${mouseY}px`;
-  });
+  }, { passive: true });
 
   function renderCursor() {
     followerX += (mouseX - followerX) * 0.15;
@@ -127,7 +138,6 @@ function initCustomCursor() {
   }
   requestAnimationFrame(renderCursor);
 
-  // Hover states
   const interactives = document.querySelectorAll('a, button, .story-card, .service-row, .insta-card, .journal-card');
   interactives.forEach(el => {
     el.addEventListener('mouseenter', () => {
@@ -164,10 +174,12 @@ function initTestimonials() {
   TESTIMONIALS_DATA.forEach((item, idx) => {
     const slide = document.createElement('div');
     slide.className = `testimonial-slide ${idx === 0 ? 'is-active' : ''}`;
+    slide.setAttribute('role', 'tabpanel');
+    slide.setAttribute('aria-label', `Testimonial ${idx + 1} of ${TESTIMONIALS_DATA.length}`);
     slide.innerHTML = `
-      <p class="testimonial-text">"${item.quote}"</p>
-      <h4 class="testimonial-author">${item.names}</h4>
-      <div class="testimonial-location">${item.location} • ${item.story}</div>
+      <blockquote class="testimonial-text">“${item.quote}”</blockquote>
+      <div class="testimonial-author">${item.names}</div>
+      <div class="testimonial-location">${item.location} · ${item.story}</div>
     `;
     slider.appendChild(slide);
   });
@@ -193,7 +205,7 @@ function initTestimonials() {
 }
 
 /* ==========================================================================
-   Journal Articles
+   Journal Articles & Reading View
    ========================================================================== */
 function initJournal() {
   const grid = document.querySelector('.journal-grid');
@@ -201,17 +213,23 @@ function initJournal() {
 
   grid.innerHTML = '';
   JOURNAL_DATA.forEach(article => {
-    const card = document.createElement('article');
+    const card = document.createElement('button');
+    card.type = 'button';
     card.className = 'journal-card reveal-on-scroll is-revealed';
+    card.setAttribute('aria-label', `Read article: ${article.title}`);
+    card.style.textAlign = 'left';
+    card.style.background = 'none';
+    card.style.border = 'none';
+
     card.innerHTML = `
       <div class="journal-img-wrap">
         <img src="${article.image}" alt="${article.title}" loading="lazy" />
       </div>
       <div class="journal-meta">
         <span>${article.category}</span>
-        <span>•</span>
+        <span>·</span>
         <span>${article.date}</span>
-        <span>•</span>
+        <span>·</span>
         <span>${article.readTime}</span>
       </div>
       <h3 class="journal-title">${article.title}</h3>
@@ -219,6 +237,7 @@ function initJournal() {
     `;
 
     card.addEventListener('click', () => {
+      lastJournalTrigger = card;
       openJournalArticle(article);
     });
 
@@ -233,25 +252,30 @@ function openJournalArticle(article) {
 
   lightboxContent.innerHTML = `
     <div class="lightbox-header" style="max-width: 820px; margin: 0 auto;">
-      <span class="eyebrow eyebrow-dark">${article.category} • ${article.date} • ${article.readTime}</span>
-      <h2 class="lightbox-title" style="font-size: clamp(2rem, 4vw, 3.25rem); margin-top: 1rem;">
+      <span class="eyebrow eyebrow-dark">${article.category} · ${article.date} · ${article.readTime}</span>
+      <h2 class="lightbox-title" id="lightboxTitle" style="font-size: clamp(2rem, 4vw, 3.25rem); margin-top: 1rem; font-weight: 300;">
         ${article.title}
       </h2>
       <div style="margin: 2.5rem 0; aspect-ratio: 16/9; overflow: hidden; background: #1a1817;">
         <img src="${article.image}" alt="${article.title}" style="width: 100%; height: 100%; object-fit: cover;" />
       </div>
-      <div class="journal-full-body" style="font-size: 1.15rem; line-height: 1.85; color: rgba(255,255,255,0.85); font-weight: 350;">
-        <p style="margin-bottom: 2rem;">${article.excerpt}</p>
+      <div class="journal-full-body" style="font-size: 1.15rem; line-height: 1.85; color: rgba(255,255,255,0.88); font-weight: 350;">
+        <p style="margin-bottom: 2rem; color: rgba(255,255,255,0.95); font-size: 1.25rem; line-height: 1.6;">${article.excerpt}</p>
         <p style="margin-bottom: 2rem;">${article.content}</p>
         <p style="font-family: var(--font-serif); font-style: italic; color: rgba(255,255,255,0.6); margin-top: 3rem;">
-          — Soulful Stories Journal Archive, Odisha
+          — Soulful Stories Journal Archive · Odisha, India
         </p>
       </div>
     </div>
   `;
 
+  lightboxDialog.setAttribute('aria-modal', 'true');
+  lightboxDialog.setAttribute('aria-labelledby', 'lightboxTitle');
   lightboxDialog.showModal();
   document.body.style.overflow = 'hidden';
+
+  const closeBtn = document.getElementById('closeLightboxBtn');
+  closeBtn?.focus();
 }
 
 /* ==========================================================================
@@ -286,6 +310,11 @@ function initInstagramGrid() {
    Intersection Observer (Scroll Reveal)
    ========================================================================== */
 function initScrollReveals() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.reveal-on-scroll').forEach(el => el.classList.add('is-revealed'));
+    return;
+  }
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -293,8 +322,8 @@ function initScrollReveals() {
       }
     });
   }, {
-    threshold: 0.15,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px'
   });
 
   document.querySelectorAll('.reveal-on-scroll').forEach(el => {
@@ -303,7 +332,7 @@ function initScrollReveals() {
 }
 
 /* ==========================================================================
-   Ambient Audio Experience (Web Audio API Synthesized Ambient Tanpura)
+   Ambient Audio Experience (Web Audio API Synthesized Indian Tanpura Drone)
    ========================================================================== */
 function initAmbientSound() {
   const toggleBtn = document.getElementById('audioToggleBtn');
@@ -327,11 +356,11 @@ function initAmbientSound() {
     }
 
     masterGain = audioCtx.createGain();
-    masterGain.gain.setValueAtTime(0.001, audioCtx.currentTime);
-    masterGain.gain.exponentialRampToValueAtTime(0.045, audioCtx.currentTime + 3);
+    masterGain.gain.setValueAtTime(0.0001, audioCtx.currentTime);
+    masterGain.gain.exponentialRampToValueAtTime(0.045, audioCtx.currentTime + 2.5);
     masterGain.connect(audioCtx.destination);
 
-    // Warm peaceful meditative harmonic frequencies (D modal Indian drone: D3, A3, D4, F#4)
+    // Warm meditative harmonic frequencies (D modal Indian drone: D3, A3, D4, F#4)
     const freqs = [146.83, 220.00, 293.66, 369.99];
 
     oscillators = freqs.map((freq, i) => {
@@ -339,11 +368,9 @@ function initAmbientSound() {
       const gain = audioCtx.createGain();
       osc.type = i % 2 === 0 ? 'sine' : 'triangle';
       osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-
-      // Subtle detune for rich celestial organic shimmer
       osc.detune.setValueAtTime((i - 1.5) * 4, audioCtx.currentTime);
 
-      gain.gain.setValueAtTime(0.3 / freqs.length, audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.28 / freqs.length, audioCtx.currentTime);
       osc.connect(gain);
       gain.connect(masterGain);
       osc.start();
@@ -352,7 +379,7 @@ function initAmbientSound() {
 
     isPlaying = true;
     toggleBtn.classList.add('is-playing');
-    toggleBtn.setAttribute('aria-label', 'Mute Ambient Sound');
+    toggleBtn.setAttribute('aria-label', 'Mute ambient soundscape');
     toggleBtn.querySelector('.audio-label').textContent = 'SOUND ON';
   }
 
@@ -366,7 +393,7 @@ function initAmbientSound() {
         oscillators = [];
         isPlaying = false;
         toggleBtn.classList.remove('is-playing');
-        toggleBtn.setAttribute('aria-label', 'Play Ambient Sound');
+        toggleBtn.setAttribute('aria-label', 'Play ambient soundscape (Tanpura drone)');
         toggleBtn.querySelector('.audio-label').textContent = 'SOUND OFF';
       }, 1200);
     }

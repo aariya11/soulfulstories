@@ -1,6 +1,8 @@
 // Services Section & Floating Hover Preview
 import { SERVICES_DATA } from './data.js';
 
+let lastActiveServiceBtn = null;
+
 export function initServices() {
   const servicesList = document.querySelector('.services-list');
   const hoverPreview = document.querySelector('.service-hover-preview');
@@ -8,16 +10,15 @@ export function initServices() {
 
   if (!servicesList) return;
 
-  // Render services rows
+  // Render services rows as semantic buttons
   servicesList.innerHTML = '';
   SERVICES_DATA.forEach(service => {
-    const row = document.createElement('div');
+    const row = document.createElement('button');
+    row.type = 'button';
     row.className = 'service-row';
     row.setAttribute('data-image', service.image);
     row.setAttribute('data-service', service.title);
-    row.setAttribute('tabindex', '0');
-    row.setAttribute('role', 'button');
-    row.setAttribute('aria-label', `Inquire about ${service.title}`);
+    row.setAttribute('aria-label', `Inquire about ${service.title} (${service.tag})`);
 
     row.innerHTML = `
       <span class="service-num">${service.number}</span>
@@ -29,22 +30,16 @@ export function initServices() {
       <span class="service-arrow" aria-hidden="true">→</span>
     `;
 
-    // Click to open inquiry modal with this service selected
     row.addEventListener('click', () => {
+      lastActiveServiceBtn = row;
       openInquiryWithService(service.title);
-    });
-    row.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        openInquiryWithService(service.title);
-      }
     });
 
     servicesList.appendChild(row);
   });
 
-  // Floating hover preview logic
-  if (!hoverPreview || !previewImg) return;
+  // Floating hover preview logic (desktop pointer only)
+  if (!hoverPreview || !previewImg || window.matchMedia('(pointer: coarse)').matches) return;
 
   let mouseX = 0;
   let mouseY = 0;
@@ -55,7 +50,7 @@ export function initServices() {
   window.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-  });
+  }, { passive: true });
 
   function animatePreview() {
     if (isHovering) {
@@ -86,21 +81,27 @@ export function initServices() {
   });
 }
 
-function openInquiryWithService(serviceTitle) {
+export function openInquiryWithService(serviceTitle) {
   const inquiryModal = document.getElementById('inquiryModal');
   const serviceSelect = document.getElementById('inquiryService');
   if (inquiryModal) {
     if (serviceSelect) {
-      // Find matching option or set value
       for (let i = 0; i < serviceSelect.options.length; i++) {
-        if (serviceSelect.options[i].text.toUpperCase().includes(serviceTitle) || 
-            serviceTitle.includes(serviceSelect.options[i].text.toUpperCase())) {
+        const optText = serviceSelect.options[i].text.toUpperCase();
+        const searchTitle = serviceTitle.toUpperCase();
+        if (optText.includes(searchTitle) || searchTitle.includes(optText)) {
           serviceSelect.selectedIndex = i;
           break;
         }
       }
     }
+    inquiryModal.setAttribute('aria-modal', 'true');
+    inquiryModal.setAttribute('aria-labelledby', 'inquiryHeading');
     inquiryModal.showModal();
     document.body.style.overflow = 'hidden';
+
+    // Focus first input
+    const firstInput = document.getElementById('inquiryName');
+    firstInput?.focus();
   }
 }

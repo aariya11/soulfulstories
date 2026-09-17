@@ -1,5 +1,5 @@
 // Portfolio, Services, Testimonials and Journal Data for Soulful Stories
-// 100% Genuine Studio Photography by Mithun Kumar (Odisha, India)
+// Authentic Studio Photography & Filmmaking by Mithun Kumar (Odisha, India)
 
 export const STORIES_DATA = [
   {
@@ -8,31 +8,35 @@ export const STORIES_DATA = [
     subtitle: 'Temple Colonnade & Golden Silks',
     category: 'Wedding Stories',
     categoryKey: 'wedding',
-    location: 'Bhubaneswar Heritage Corridor',
+    location: 'Bhubaneswar, Odisha · 2025',
     year: '2025',
     aspect: 'aspect-tall',
     featured: true,
     coverImage: '/assets/temple-heritage-couple.jpg',
     coverThumb: '/assets/temple-heritage-couple.jpg',
-    synopsis: 'An ethereal celebration framed by ancient carved stone pillars, handloom yellow Kanchipuram silk, and a quiet embrace steeped in centuries of heritage.',
+    altText: 'Bride and groom in handloom yellow silk and traditional dhoti embracing amidst ancient carved stone temple colonnades in Bhubaneswar, Odisha',
+    synopsis: 'Framed by ancient stone pillars, handloom yellow Kanchipuram silk, and natural afternoon light, this celebration was grounded in centuries of Odia architectural heritage.',
     details: {
       venue: 'Ancient Heritage Temple Colonnade, Bhubaneswar',
-      rituals: 'Sacred Vedic Vows & Temple Blessings',
+      rituals: 'Vedic Vows & Temple Blessings',
       palette: 'Temple Gold, Raw Ivory & Weathered Sandstone',
-      quote: 'Mithun framed our love against the stone pillars like an ancient poem. We were completely spellbound.'
+      quote: 'Mithun framed our celebration against the stone pillars with such quiet reverence. The photographs feel alive.'
     },
     gallery: [
       {
         url: '/assets/temple-heritage-couple.jpg',
-        caption: 'Embrace within the historic stone pillars at golden hour.'
+        caption: 'Embrace within the historic stone pillars at golden hour.',
+        alt: 'Couple standing in traditional attire between ancient temple pillars in Bhubaneswar'
       },
       {
         url: '/assets/royal-bride.jpg',
-        caption: 'The bride adorned in heirloom uncut polki jewelry.'
+        caption: 'Adorned in heirloom polki jewelry and crimson zardozi silk.',
+        alt: 'Close-up portrait of bride in ancestral uncut polki jewelry and embroidered red veil'
       },
       {
         url: '/assets/mandap-chandelier-bride.png',
-        caption: 'Beneath the chandeliers during the evening ceremony.'
+        caption: 'Beneath the chandeliers during the evening mandap rituals.',
+        alt: 'Low-angle view of bride standing beneath glowing chandeliers at the wedding mandap'
       }
     ]
   },
@@ -42,27 +46,30 @@ export const STORIES_DATA = [
     subtitle: 'The Royal Heritage Bride',
     category: 'Wedding Stories',
     categoryKey: 'wedding',
-    location: 'Bhubaneswar, Odisha',
+    location: 'Bhubaneswar, Odisha · 2025',
     year: '2025',
     aspect: 'aspect-tall',
     featured: true,
     coverImage: '/assets/royal-bride.jpg',
     coverThumb: '/assets/royal-bride.jpg',
-    synopsis: 'A regal portrait of timeless Odia bridal beauty, adorned in heirloom zardozi crimson, handcrafted temple polki matha patti, and delicate floral accents.',
+    altText: 'Regal bridal portrait of Ananya in hand-embroidered royal red lehenga and ancestral polki matha patti in Bhubaneswar, Odisha',
+    synopsis: 'A regal portrait of Odia bridal tradition, draped in heirloom zardozi crimson, handcrafted temple polki matha patti, and delicate floral accents.',
     details: {
       venue: 'Heritage Courtyard, Bhubaneswar',
       rituals: 'Vedic Wedding & Sacred Mandap',
       palette: 'Royal Crimson, Antique Gold & Emerald Drops',
-      quote: 'Soulful Stories captured every bead, every breath, and the sacred reverence of our wedding day.'
+      quote: 'Soulful Stories captured every detail, every breath, and the sacred stillness of our wedding morning.'
     },
     gallery: [
       {
         url: '/assets/royal-bride.jpg',
-        caption: 'Ananya in hand-embroidered royal red lehenga and ancestral polki jewelry.'
+        caption: 'Ananya in hand-embroidered royal red lehenga and ancestral polki jewelry.',
+        alt: 'Bridal portrait showcasing polki jewelry and intricate lehenga embroidery'
       },
       {
         url: '/assets/haldi-celebration.jpg',
-        caption: 'Joyous celebration with bridesmaids before the sacred ceremony.'
+        caption: 'Joyous celebration with bridesmaids before the sacred ceremony.',
+        alt: 'Haldi Snana ritual with bride and bridesmaids in yellow silks smiling together'
       }
     ]
   },
@@ -72,27 +79,30 @@ export const STORIES_DATA = [
     subtitle: 'The Sacred Roots',
     category: 'Pre-Wedding',
     categoryKey: 'pre-wedding',
-    location: 'Heritage Grove, Odisha',
+    location: 'Baripada, Odisha · 2024',
     year: '2024',
     aspect: 'aspect-wide',
     featured: true,
     coverImage: '/assets/traditional-tree-couple.png',
     coverThumb: '/assets/traditional-tree-couple.png',
-    synopsis: 'Resting by the roots of a sacred banyan tree against the open sky, celebrating classical Odia handloom red drape and traditional white-gold dhoti.',
+    altText: 'Traditional Odia couple in handloom red drape and white silk dhoti seated peacefully beneath a massive ancient banyan tree in Odisha',
+    synopsis: 'Resting beside the roots of a historic banyan sanctuary, celebrating classical Odia handloom red drape, white-gold dhoti, and unforced quiet companionship.',
     details: {
-      venue: 'Historic Banyan Sanctuary, Odisha',
+      venue: 'Historic Banyan Grove, Odisha',
       styling: 'Heirloom red saree with silver borders & traditional dhoti',
       light: 'Crisp morning daylight & open sky',
-      quote: 'Soulful Stories understood our love for our roots and our culture. This photograph is our pride.'
+      quote: 'Soulful Stories understood our connection to our cultural roots. This photograph is our family heirloom.'
     },
     gallery: [
       {
         url: '/assets/traditional-tree-couple.png',
-        caption: 'Resting in peaceful stillness by the historic temple tree.'
+        caption: 'Resting in peaceful stillness by the historic temple tree.',
+        alt: 'Couple seated serenely by roots of ancient sacred tree'
       },
       {
         url: '/assets/candid-couple.jpg',
-        caption: 'Spontaneous candid laughter in the afternoon shade.'
+        caption: 'Unscripted candid laughter in the afternoon shade.',
+        alt: 'Candid smiles and gentle conversation in shaded woodland'
       }
     ]
   },
@@ -102,27 +112,30 @@ export const STORIES_DATA = [
     subtitle: 'Chandeliers & Crimson Velvet',
     category: 'Wedding Stories',
     categoryKey: 'wedding',
-    location: 'Royal Pavilion, Cuttack',
+    location: 'Cuttack, Odisha · 2025',
     year: '2025',
     aspect: 'aspect-tall',
     featured: true,
     coverImage: '/assets/mandap-chandelier-bride.png',
     coverThumb: '/assets/mandap-chandelier-bride.png',
-    synopsis: 'Dramatic architectural perspective capturing the bride in crimson sequins beneath shimmering crystal chandeliers and grand silk canopies.',
+    altText: 'Low-angle architectural view of bride in crimson velvet lehenga beneath illuminated crystal chandeliers in Cuttack, Odisha',
+    synopsis: 'A low-angle architectural perspective capturing the bride in crimson sequins beneath shimmering crystal chandeliers and grand mandap silk canopies.',
     details: {
       venue: 'Royal Orchid Pavilion, Cuttack',
       rituals: 'Saptapadi & Evening Mandap Reception',
       palette: 'Deep Scarlet, Crystal Amber & Chandelier Gold',
-      quote: 'The cinematic scale Mithun created was astonishing. Our guests were mesmerized.'
+      quote: 'The visual scale that Mithun composed was breathtaking. It honored both our ceremony and our architecture.'
     },
     gallery: [
       {
         url: '/assets/mandap-chandelier-bride.png',
-        caption: 'Low-angle grandeur beneath the glowing wedding chandeliers.'
+        caption: 'Low-angle perspective beneath glowing wedding chandeliers.',
+        alt: 'Bride gazing upward beneath chandelier installations'
       },
       {
         url: '/assets/royal-bride.jpg',
-        caption: 'Intimate close-up portrait before the baraat arrival.'
+        caption: 'Intimate bridal portrait before the evening arrival.',
+        alt: 'Heirloom polki jewelry and red embroidered lehenga'
       }
     ]
   },
@@ -132,72 +145,79 @@ export const STORIES_DATA = [
     subtitle: 'Fine-Art Editorial Nuance',
     category: 'Fashion & Portraits',
     categoryKey: 'portrait',
-    location: 'Studio Soulful, Bhubaneswar',
+    location: 'Bhubaneswar, Odisha · 2025',
     year: '2025',
     aspect: 'aspect-tall',
     featured: true,
     coverImage: '/assets/fashion-crown-portrait.png',
     coverThumb: '/assets/fashion-crown-portrait.png',
-    synopsis: 'A high-fashion magazine editorial celebrating a sparkling sequin gown, handcrafted ruby-and-crystal tiara, and intimate meditative gesture.',
+    altText: 'Editorial close-up beauty portrait of woman in sparkling black sequin dress wearing handcrafted ruby crystal pageant crown in Bhubaneswar studio',
+    synopsis: 'A high-fashion studio editorial combining sculpted chiaroscuro lighting, black sequin textures, and a handcrafted ruby-and-crystal crown.',
     details: {
       client: 'Bhubaneswar Couture Magazine Campaign',
-      concept: 'Regal Pageantry & Introspective Glamour',
-      medium: 'Medium Format High-Key Editorial Lighting'
+      concept: 'Pageantry & Introspective Glamour',
+      medium: 'Studio Medium Format Editorial Lighting'
     },
     gallery: [
       {
         url: '/assets/fashion-crown-portrait.png',
-        caption: 'Introspective editorial close-up with the ruby gemstone crown.'
+        caption: 'Introspective editorial close-up with the ruby gemstone crown.',
+        alt: 'Close-up portrait featuring ruby tiara and sequin gown'
       },
       {
         url: '/assets/fashion-crown-gown.png',
-        caption: 'Full-length evening gown couture silhouette.'
+        caption: 'Full-length evening gown couture silhouette.',
+        alt: 'Full silhouette gown with hands positioned on crown'
       }
     ]
   },
   {
     id: 'pooja-siddharth-coast',
     title: 'Pooja & Siddharth',
-    subtitle: 'Coastal Horizons & Reaching Hands',
+    subtitle: 'Coastal Horizons & Open Skies',
     category: 'Pre-Wedding',
     categoryKey: 'pre-wedding',
-    location: 'Puri Beach & Marine Drive',
+    location: 'Puri Coastline, Odisha · 2025',
     year: '2025',
     aspect: 'aspect-tall',
     featured: true,
     coverImage: '/assets/coastal-prewedding.png',
     coverThumb: '/assets/coastal-prewedding.png',
-    synopsis: 'A minimalist, wind-swept editorial narrative along the open horizon of the Bay of Bengal, celebrating delicate touch, sea breezes, and effortless companionship.',
+    altText: 'Couple in light linen and floral dress walking hand-in-hand along the sandy coastline of Puri, Odisha under expansive blue sky',
+    synopsis: 'A minimalist editorial along the open horizon of the Bay of Bengal, celebrating gentle companionship, sea breezes, and unforced movement.',
     details: {
       venue: 'Puri Coastline & Marine Drive',
-      styling: 'Cool sky linens and ocean blue floral dress',
+      styling: 'Cool sky linens & ocean blue floral dress',
       light: 'Soft afternoon coastal haze',
-      quote: 'Mithun framed us against the sea and sky like a dream. No artificial drama, just pure visual poetry.'
+      quote: 'Mithun framed us against the sea and sky without any artificial drama. It represents us completely.'
     },
     gallery: [
       {
         url: '/assets/coastal-prewedding.png',
-        caption: 'Walking along the coastal marine edge under the endless blue sky.'
+        caption: 'Walking along the coastal marine edge under the endless blue sky.',
+        alt: 'Pre-wedding couple walking along shoreline in Puri'
       },
       {
         url: '/assets/candid-couple.jpg',
-        caption: 'Quiet unscripted laughter beneath the canopy.'
+        caption: 'Quiet unscripted laughter beneath the canopy.',
+        alt: 'Gentle smiles under shaded woodland'
       }
     ]
   },
   {
     id: 'emerald-nocturne',
     title: 'The Emerald Nocturne',
-    subtitle: 'Fine-Art Couture Portraiture',
+    subtitle: 'Fine-Art Velvet Portraiture',
     category: 'Fashion & Portraits',
     categoryKey: 'portrait',
-    location: 'Old Town Heritage Studio, Bhubaneswar',
+    location: 'Bhubaneswar, Odisha · 2025',
     year: '2025',
     aspect: 'aspect-tall',
     featured: true,
     coverImage: '/assets/emerald-portrait.png',
     coverThumb: '/assets/emerald-portrait.png',
-    synopsis: 'A masterclass in dramatic low-key lighting, rich dark emerald velvet, intricate gold borders, and the quiet dignity of classical Indian beauty.',
+    altText: 'Fine-art bridal portrait in deep emerald green velvet drape and uncut polki necklace against dark background in Bhubaneswar, Odisha',
+    synopsis: 'An exploration of dramatic low-key studio lighting, deep emerald velvet drape, antique gold borders, and classical Indian portraiture.',
     details: {
       client: 'Bespoke Bridal Couture Commission',
       concept: 'Chiaroscuro & Velvet Textures',
@@ -206,53 +226,58 @@ export const STORIES_DATA = [
     gallery: [
       {
         url: '/assets/emerald-portrait.png',
-        caption: 'Sculptural lighting detailing the emerald velvet drape and heirloom jewelry.'
+        caption: 'Sculptural lighting detailing emerald velvet drape and heirloom jewelry.',
+        alt: 'Fine-art bridal portrait in emerald green velvet'
       }
     ]
   },
   {
     id: 'aarushi-haldi',
-    title: 'Aarushi’s Haldi Jubilee',
-    subtitle: 'Laughter, Sunlight & Yellow Silks',
+    title: 'Aarushi’s Haldi Snana',
+    subtitle: 'Morning Sunlight & Yellow Silks',
     category: 'Wedding Stories',
     categoryKey: 'wedding',
-    location: 'Riverfront Lawn, Cuttack',
+    location: 'Cuttack, Odisha · 2025',
     year: '2025',
     aspect: 'aspect-tall',
     featured: true,
     coverImage: '/assets/haldi-celebration.jpg',
     coverThumb: '/assets/haldi-celebration.jpg',
-    synopsis: 'An exuberant outdoor Haldi celebration bathed in morning sunshine, filled with laughter, vibrant marigolds, and the sisterhood of brides.',
+    altText: 'Bride Aarushi surrounded by laughing bridesmaids in festive yellow silk sarees during traditional Haldi Snana ceremony in Cuttack, Odisha',
+    synopsis: 'An exuberant outdoor Haldi celebration bathed in morning sunshine, filled with laughter, fresh marigolds, and the warmth of family sisterhood.',
     details: {
-      venue: 'Private Garden Lawn, Cuttack',
+      venue: 'Riverfront Lawn, Cuttack',
       rituals: 'Haldi Snana, Mehendi & Floral Vows',
       palette: 'Sunlit Yellow, Coral Pink & Fresh Marigold',
-      quote: 'Looking at this picture brings back the singing, the teasing, and the pure happiness of that morning.'
+      quote: 'Looking at this picture instantly brings back the singing, the teasing, and the pure happiness of that morning.'
     },
     gallery: [
       {
         url: '/assets/haldi-celebration.jpg',
-        caption: 'Aarushi surrounded by her closest friends in sun-drenched laughter.'
+        caption: 'Aarushi surrounded by her closest friends in sun-drenched laughter.',
+        alt: 'Bridesmaids laughing during Haldi ceremony'
       },
       {
         url: '/assets/royal-bride.jpg',
-        caption: 'The bride ready for her evening mandap.'
+        caption: 'The bride ready for her evening mandap.',
+        alt: 'Bride in evening ceremony lehenga and jewelry'
       }
     ]
   },
   {
     id: 'fashion-crown-gown',
     title: 'The Sovereign Gala',
-    subtitle: 'Pageant Crown & Sequined Silhouette',
+    subtitle: 'Pageant Crown & Evening Silhouette',
     category: 'Fashion & Portraits',
     categoryKey: 'portrait',
-    location: 'Couture Pavilion, Bhubaneswar',
+    location: 'Bhubaneswar, Odisha · 2025',
     year: '2025',
     aspect: 'aspect-tall',
     featured: false,
     coverImage: '/assets/fashion-crown-gown.png',
     coverThumb: '/assets/fashion-crown-gown.png',
-    synopsis: 'Full silhouette glamour celebrating modern pageant royalty, sparkling black sequins, and an exquisite magenta gem crown.',
+    altText: 'Full-length fashion portrait in sparkling black sequin gown holding an ornate magenta crystal crown in Bhubaneswar, Odisha',
+    synopsis: 'Full silhouette elegance celebrating modern pageant poise, black sequins, and an exquisite magenta gemstone crown.',
     details: {
       concept: 'Haute Couture Pageant Campaign',
       styling: 'Sequin Mermaid Gown & Ruby Tiara'
@@ -260,41 +285,46 @@ export const STORIES_DATA = [
     gallery: [
       {
         url: '/assets/fashion-crown-gown.png',
-        caption: 'Full-length silhouette holding the crown with poised grace.'
+        caption: 'Full-length silhouette holding the crown with poised grace.',
+        alt: 'Full length evening gown with crown'
       },
       {
         url: '/assets/fashion-crown-portrait.png',
-        caption: 'Editorial beauty close-up.'
+        caption: 'Editorial beauty close-up.',
+        alt: 'Close-up fashion beauty portrait'
       }
     ]
   },
   {
     id: 'sneha-dev-candid',
     title: 'Sneha & Dev',
-    subtitle: 'Whispering Beneath the Canopy',
+    subtitle: 'Quiet Moments Beneath the Canopy',
     category: 'Pre-Wedding',
     categoryKey: 'pre-wedding',
-    location: 'Botanical Sanctuary, Odisha',
+    location: 'Puri District, Odisha · 2024',
     year: '2024',
     aspect: 'aspect-tall',
     featured: false,
     coverImage: '/assets/candid-couple.jpg',
     coverThumb: '/assets/candid-couple.jpg',
-    synopsis: 'An intimate, unscripted moment resting by the roots of a historic banyan tree, capturing the gentle comfort and private jokes of two lovers.',
+    altText: 'Sneha and Dev sharing an unposed smile resting beneath a shaded banyan tree canopy in rural Odisha',
+    synopsis: 'An intimate, unscripted moment resting by the roots of a historic banyan tree, capturing gentle companionship and natural laughter.',
     details: {
       venue: 'Ancient Grove Sanctuary, Odisha',
-      styling: 'Cozy everyday casuals & genuine smiles',
+      styling: 'Relaxed attire & genuine smiles',
       light: 'Dappled woodland midday shadow',
-      quote: 'We didn’t even realize when Mithun took this shot. It is our most treasured memory.'
+      quote: 'We did not even realize when Mithun took this photograph. It remains our most treasured memory.'
     },
     gallery: [
       {
         url: '/assets/candid-couple.jpg',
-        caption: 'Candid smiles and resting moments under the ancient tree.'
+        caption: 'Candid smiles and resting moments under the ancient tree.',
+        alt: 'Couple smiling naturally under banyan tree'
       },
       {
         url: '/assets/coastal-prewedding.png',
-        caption: 'Coastal horizons along the Odisha shore.'
+        caption: 'Coastal horizons along the Odisha shore.',
+        alt: 'Pre-wedding session on shoreline'
       }
     ]
   }
@@ -305,52 +335,52 @@ export const SERVICES_DATA = [
     number: '01',
     title: 'WEDDING FILMS',
     tag: 'Cinematography',
-    description: 'Cinematic films crafted around your story. 4K colour-graded narrative, drone perspectives, and bespoke emotional sound design.',
+    description: 'Cinematic films crafted with narrative intention. 4K colour grading, licensed orchestral and ambient scores, drone perspectives, and multi-camera ritual documentation.',
     image: '/assets/temple-heritage-couple.jpg',
     deliverables: [
-      'Extended 15-25 minute Cinematic Master Film',
-      '3-4 minute Signature Highlight Teaser & Vertical Reels',
-      'Multi-camera comprehensive coverage of Vedic rituals',
-      'Bespoke cinematic sound design & licensed orchestral score'
+      '15–25 minute Cinematic Master Film',
+      '3–4 minute Signature Highlight Teaser',
+      'Full-length documentation of Vedic rituals & speeches',
+      'Colour-graded 4K master delivery & vertical social reels'
     ]
   },
   {
     number: '02',
     title: 'WEDDING PHOTOGRAPHY',
     tag: 'Fine-Art Documentation',
-    description: 'Authentic moments captured with an editorial eye. We document ritual sacredness, raw unposed interactions, and heirloom couple portraits.',
+    description: 'Authentic moments documented with an editorial eye. We honor ritual sacredness, raw unposed interactions, and heirloom couple portraits rooted in natural light.',
     image: '/assets/mandap-chandelier-bride.png',
     deliverables: [
       'Comprehensive multi-day wedding storytelling',
-      'Hand-curated, colour-graded high-resolution master collection',
-      'Linen-bound bespoke heirloom fine-art album',
-      'Private online gallery with lifelong cloud preservation'
+      'Hand-curated, colour-graded high-resolution master gallery',
+      'Bespoke linen-bound fine-art heirloom album',
+      'Lifelong private cloud archive with high-speed download'
     ]
   },
   {
     number: '03',
-    title: 'PRE-WEDDING',
-    tag: 'Visual Love Letters',
-    description: 'Intimate visual stories created around your connection. Architectural heritage sites, coastal sunsets, or quiet personal sanctuaries.',
+    title: 'PRE-WEDDING NARRATIVES',
+    tag: 'Visual Stories',
+    description: 'Intimate visual stories created around your natural dynamic. Historic architectural sites, coastal dawn light at Puri, or quiet personal sanctuaries.',
     image: '/assets/traditional-tree-couple.png',
     deliverables: [
-      'Creative concept curation & scenic location scouting',
-      'Dawn & twilight golden hour lighting sessions',
-      'Styling and wardrobe aesthetic consultation',
-      'Signature cinematic preview video & fine-art portrait suite'
+      'Concept curation & scenic location scouting across Odisha',
+      'Dawn & twilight golden hour photography sessions',
+      'Wardrobe, handloom & styling consultation',
+      'Signature cinematic preview video & fine-art portrait collection'
     ]
   },
   {
     number: '04',
-    title: 'FASHION & PORTRAITS',
+    title: 'FASHION & PORTRAITURE',
     tag: 'Editorial & Couture',
-    description: 'Modern portraiture with a refined visual language. Tailored for bridal couture, pageant campaigns, and personal legacies.',
+    description: 'Refined editorial portraiture tailored for bridal couture campaigns, pageantry, and personal family legacies, preserving natural skin textures and sculptural light.',
     image: '/assets/fashion-crown-portrait.png',
     deliverables: [
-      'High-fashion creative direction & moodboard development',
-      'Editorial studio and heritage architectural location shoots',
-      'Editorial magazine retouching with natural skin texture preservation',
-      'Print and digital commercial licensing rights'
+      'Editorial creative direction & moodboard development',
+      'Studio chiaroscuro and heritage location sessions',
+      'Natural-texture magazine retouching (no artificial airbrushing)',
+      'Digital commercial & print exhibition licensing'
     ]
   }
 ];
@@ -359,20 +389,20 @@ export const TESTIMONIALS_DATA = [
   {
     quote: 'Mithun and his team possess a rare sensitivity. They knew when to be invisible and when to guide us gently. Looking at our wedding album feels like reliving the most honest, radiant weekend of our lives.',
     names: 'Ananya & Siddharth',
-    location: 'Bhubaneswar & Puri',
-    story: 'Temple Heritage Wedding, 2025'
+    location: 'Bhubaneswar, Odisha · 2025',
+    story: 'Temple Heritage Wedding'
   },
   {
-    quote: 'We wanted a wedding film that felt like a quiet indie film, not a chaotic music video. What Soulful Stories delivered brought both our extended families to tears. Every single frame looks like a fine painting.',
+    quote: 'We wanted a wedding film that felt like a quiet indie film rather than a generic video. What Soulful Stories delivered brought both our extended families to tears. Every frame looks like an intentional photograph.',
     names: 'Roshni & Manav',
-    location: 'Royal Orchid, Cuttack',
-    story: 'Mandap Film & Photography, 2025'
+    location: 'Cuttack, Odisha · 2025',
+    story: 'Mandap Celebration & Film'
   },
   {
-    quote: 'Our shoot by the sacred temple tree was effortless and deeply peaceful. Mithun captured our banter, our silences, and our cultural attire without making us do a single forced pose.',
+    quote: 'Our shoot by the sacred temple tree was effortless and deeply peaceful. Mithun captured our banter, our silences, and our handloom attire without a single forced pose.',
     names: 'Suryakant & Sweta',
-    location: 'Baripada Heritage Enclave',
-    story: 'Pre-Wedding Narrative, 2024'
+    location: 'Mayurbhanj, Odisha · 2024',
+    story: 'Heritage Pre-Wedding Narrative'
   }
 ];
 
@@ -381,10 +411,10 @@ export const JOURNAL_DATA = [
     id: 'journal-1',
     date: 'February 2025',
     category: 'Editorial Guide',
-    title: 'The Art of Ancient Stone: Temple Corridors in Wedding Photography',
+    title: 'The Heritage Stone: Ancient Temple Corridors in Wedding Documentation',
     readTime: '4 min read',
     excerpt: 'How historic carved pillars, yellow Kanchipuram silk, and natural afternoon shadows create an heirloom cinematic aesthetic.',
-    content: 'When we photograph couples in the historic stone colonnades of Odisha, we leave behind artificial props. The carved columns tell centuries of stories. As seen in our session with Ananya and Siddharth, framing raw ivory and yellow silk against weathered temple stone produces an emotional permanence that transcends modern trends.',
+    content: 'When we photograph couples in the historic stone colonnades of Odisha, we leave behind artificial props. The carved columns tell centuries of stories. Framing raw ivory and yellow silk against weathered temple stone produces an emotional permanence that transcends modern trends.',
     image: '/assets/temple-heritage-couple.jpg'
   },
   {
@@ -393,18 +423,18 @@ export const JOURNAL_DATA = [
     category: 'Studio Philosophy',
     title: 'The Architecture of the Mandap: Chandeliers & Low-Angle Light',
     readTime: '5 min read',
-    excerpt: 'Capturing the monumental grandeur of the wedding altar while preserving the intimate sacred reverence of the bride.',
-    content: 'An Indian wedding mandap is a temple unto itself. In our portrait of Roshni beneath glowing chandeliers and crimson drapes, we chose a low-angle perspective to celebrate both the monumental scale of the celebration and the serene poise of the bride before the Vedic fire.',
+    excerpt: 'Capturing the monumental scale of the wedding altar while preserving the intimate sacred reverence of the bride.',
+    content: 'An Indian wedding mandap is a sacred sanctuary. Beneath glowing chandeliers and crimson drapes, choosing a low-angle perspective celebrates both the architectural scale of the celebration and the serene poise of the bride before the Vedic fire.',
     image: '/assets/mandap-chandelier-bride.png'
   },
   {
     id: 'journal-3',
     date: 'December 2024',
     category: 'Couture Direction',
-    title: 'The Crown & the Chiaroscuro: Modern Pageant Editorial',
+    title: 'Chiaroscuro & Couture: Modern Pageant and Fine-Art Lighting',
     readTime: '6 min read',
-    excerpt: 'Exploring high-contrast studio illumination, sequin textures, and ruby tiaras for contemporary fashion commissions.',
-    content: 'Fashion portraiture demands an entirely different visual cadence than wedding photojournalism. Here, every millimeter of light is sculpted. Combining deep magenta rim-light with black sequin gowns allows the subject and her crown to emerge like jewels from the dark.',
+    excerpt: 'Exploring high-contrast studio illumination, sequin textures, and ruby tiaras for contemporary portrait commissions.',
+    content: 'Fashion portraiture demands an intentional visual cadence. Here, every millimeter of light is sculpted. Combining deep magenta rim-light with black sequin gowns allows the subject and her crown to emerge like jewels from the dark.',
     image: '/assets/fashion-crown-portrait.png'
   }
 ];
@@ -412,42 +442,42 @@ export const JOURNAL_DATA = [
 export const INSTAGRAM_FEED = [
   {
     type: 'REEL',
-    title: 'Kalinga temple colonnade: An eternal embrace',
+    title: 'Kalinga temple colonnade: An eternal embrace in Bhubaneswar',
     image: '/assets/temple-heritage-couple.jpg',
     likes: '6.4k',
     link: 'https://www.instagram.com/soulfulstories1/'
   },
   {
     type: 'STILL',
-    title: 'The royal bride beneath the mandap chandelier',
+    title: 'The royal bride beneath the mandap chandelier in Cuttack',
     image: '/assets/mandap-chandelier-bride.png',
     likes: '5.1k',
     link: 'https://www.instagram.com/soulfulstories1/'
   },
   {
     type: 'REEL',
-    title: 'Resting by the roots of time: Sacred banyan shoot',
+    title: 'Resting by the roots of time: Sacred banyan shoot in Odisha',
     image: '/assets/traditional-tree-couple.png',
     likes: '4.7k',
     link: 'https://www.instagram.com/soulfulstories1/'
   },
   {
     type: 'STILL',
-    title: 'Couture beauty queen: Ruby crown in black sequin',
+    title: 'Editorial couture beauty: Handcrafted ruby gemstone crown',
     image: '/assets/fashion-crown-portrait.png',
     likes: '7.2k',
     link: 'https://www.instagram.com/soulfulstories1/'
   },
   {
     type: 'STILL',
-    title: 'Coastal horizons: Hands reaching over Puri sands',
+    title: 'Coastal horizons: Gentle touch along the Puri shoreline',
     image: '/assets/coastal-prewedding.png',
     likes: '5.8k',
     link: 'https://www.instagram.com/soulfulstories1/'
   },
   {
     type: 'STILL',
-    title: 'In the field: Founder & Director Mithun Kumar',
+    title: 'In the field: Founder & Lead Photographer Mithun Kumar',
     image: '/assets/mithun-kumar.png',
     likes: '4.9k',
     link: 'https://www.instagram.com/mithun_kumar_04/'

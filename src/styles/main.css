@@ -48,6 +48,40 @@ button {
   cursor: pointer;
 }
 
+/* Accessibility: Keyboard Focus Indicators (WCAG 2.2 AA) */
+:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.site-header.is-transparent-hero :focus-visible,
+.approach-section :focus-visible,
+.site-footer :focus-visible,
+.modal-lightbox-content :focus-visible {
+  outline: var(--focus-ring-inv);
+}
+
+/* Accessible Skip Link */
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: 1.5rem;
+  z-index: 1200;
+  background-color: var(--color-near-black);
+  color: var(--color-white);
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-to-content:focus {
+  top: 1.5rem;
+}
+
 /* Layout Utilities */
 .container {
   max-width: var(--container-max);
@@ -300,5 +334,25 @@ button {
   .btn-editorial-secondary {
     width: 100%;
     justify-content: center;
+  }
+}
+
+/* Accessibility: Reduced Motion Preference (WCAG 2.2 AA) */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  
+  .hero-bg-img {
+    animation: none !important;
+    transform: none !important;
   }
 }

@@ -14,26 +14,20 @@
   align-items: center;
 }
 
-.approach-headline-part1 {
+.approach-statement {
   font-family: var(--font-serif);
-  font-size: clamp(2.4rem, 4.2vw, 4.2rem);
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
   font-weight: 300;
-  line-height: 1.05;
-  letter-spacing: -0.015em;
-  color: rgba(255, 255, 255, 0.48);
-  margin: 1.25rem 0 0.5rem 0;
-  text-transform: uppercase;
-}
-
-.approach-headline-part2 {
-  font-family: var(--font-serif);
-  font-size: clamp(2.4rem, 4.2vw, 4.2rem);
-  font-weight: 300;
-  line-height: 1.05;
+  line-height: 1.12;
   letter-spacing: -0.015em;
   color: var(--color-white);
-  margin: 0 0 2.5rem 0;
-  text-transform: uppercase;
+  margin: 1.25rem 0 2rem 0;
+}
+
+.approach-statement-muted {
+  color: rgba(255, 255, 255, 0.52);
+  display: block;
+  margin-bottom: 0.35rem;
 }
 
 .approach-philosophy {

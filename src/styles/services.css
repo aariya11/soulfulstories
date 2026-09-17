@@ -15,7 +15,11 @@
   grid-template-columns: 80px 1.2fr 1.6fr 50px;
   align-items: center;
   padding: clamp(2rem, 3.5vw, 3rem) 0;
+  border: none;
   border-bottom: 1px solid var(--color-border-light);
+  background: none;
+  width: 100%;
+  text-align: left;
   cursor: pointer;
   transition: padding-left var(--duration-fast) var(--ease-editorial),
               background-color var(--duration-fast) ease;
