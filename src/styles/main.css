@@ -1,0 +1,304 @@
+/* Main Stylesheet — Soulful Stories */
+@import './variables.css';
+@import './typography.css';
+@import './nav.css';
+@import './hero.css';
+@import './intro.css';
+@import './gallery.css';
+@import './services.css';
+@import './approach.css';
+@import './social-testimonials.css';
+@import './about-journal.css';
+@import './cta-footer.css';
+@import './modals.css';
+@import './cursor-mobile.css';
+
+/* CSS Reset & Foundation */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-offwhite);
+  color: var(--color-text-primary);
+  font-size: 16px;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  background-color: var(--color-offwhite);
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Layout Utilities */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  width: 100%;
+}
+
+/* Scroll reveal animations (subtle, editorial) */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s var(--ease-editorial), transform 0.8s var(--ease-editorial);
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Accessible Screen Reader Only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Ambient Audio Status Indicator */
+.audio-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  background: transparent;
+  border: 1px solid var(--color-border-medium);
+  border-radius: 100px;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  transition: all var(--duration-fast) ease;
+}
+
+.audio-toggle-btn:hover {
+  background-color: var(--color-near-black);
+  color: var(--color-white);
+  border-color: var(--color-near-black);
+}
+
+.sound-waves {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 10px;
+}
+
+.sound-bar {
+  width: 2px;
+  height: 100%;
+  background-color: currentColor;
+  border-radius: 1px;
+  transition: height 0.2s ease;
+}
+
+.audio-toggle-btn.is-playing .sound-bar:nth-child(1) {
+  animation: soundWave 0.8s ease infinite alternate;
+}
+.audio-toggle-btn.is-playing .sound-bar:nth-child(2) {
+  animation: soundWave 1.2s ease infinite alternate 0.2s;
+}
+.audio-toggle-btn.is-playing .sound-bar:nth-child(3) {
+  animation: soundWave 0.9s ease infinite alternate 0.4s;
+}
+
+@keyframes soundWave {
+  0% { height: 20%; }
+  100% { height: 100%; }
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN SYSTEM
+   ========================================================================== */
+
+/* Tablets (1024px and below) */
+@media (max-width: 1024px) {
+  .nav-menu {
+    display: none;
+  }
+  
+  .mobile-menu-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .intro-content {
+    padding-right: 0;
+  }
+
+  .editorial-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  .story-col-7,
+  .story-col-5,
+  .story-col-6,
+  .story-col-4,
+  .story-col-8 {
+    grid-column: span 1;
+    margin-top: 0;
+  }
+
+  .service-row {
+    grid-template-columns: 50px 1fr 30px;
+    gap: 1rem;
+  }
+
+  .service-desc {
+    grid-column: 2 / -1;
+    margin-top: 0.5rem;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .journal-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* Mobile Devices (768px and below) */
+@media (max-width: 768px) {
+  :root {
+    --space-3xl: 5rem;
+    --space-2xl: 4rem;
+    --container-padding: 1.5rem;
+  }
+
+  .site-header {
+    padding: 1.25rem 0;
+  }
+
+  .brand-title {
+    font-size: 1.2rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .hero-footer-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .editorial-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .gallery-filter-bar {
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .filter-btn {
+    white-space: nowrap;
+  }
+
+  .service-row {
+    grid-template-columns: 40px 1fr 24px;
+    padding: 1.75rem 0;
+  }
+
+  .service-title {
+    font-size: 1.5rem;
+  }
+
+  .approach-pillars {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .journal-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .form-group-row {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .modal-inquiry-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .final-cta-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-editorial-primary,
+  .btn-editorial-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}

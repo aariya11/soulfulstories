@@ -1,0 +1,185 @@
+/* 7. Instagram / Social Proof */
+.instagram-section {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.insta-header-wrap {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.insta-handle {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--color-near-black);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.insta-handle:hover {
+  opacity: 0.8;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.25rem;
+}
+
+.insta-card {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  background-color: var(--color-cream);
+}
+
+.insta-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-editorial);
+}
+
+.insta-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(12, 11, 10, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  opacity: 0;
+  transition: opacity var(--duration-fast) ease;
+  padding: 1rem;
+  text-align: center;
+}
+
+.insta-card:hover .insta-card-overlay {
+  opacity: 1;
+}
+
+.insta-card:hover img {
+  transform: scale(1.06);
+}
+
+.insta-badge-type {
+  font-size: 0.625rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.insta-likes {
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+}
+
+/* 8. Testimonials (Editorial Minimal) */
+.testimonials-section {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-offwhite);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.testimonials-container {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonials-lead-quote {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.8vw, 3.25rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--color-near-black);
+  margin: 1.5rem 0 3.5rem 0;
+}
+
+.testimonials-slider {
+  position: relative;
+  min-height: 180px;
+}
+
+.testimonial-slide {
+  display: none;
+  opacity: 0;
+  transition: opacity var(--duration-normal) ease;
+}
+
+.testimonial-slide.is-active {
+  display: block;
+  opacity: 1;
+}
+
+.testimonial-text {
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+  font-weight: 350;
+}
+
+.testimonial-author {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.testimonial-location {
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  margin-top: 0.25rem;
+}
+
+.testimonial-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.test-btn {
+  background: none;
+  border: 1px solid var(--color-border-medium);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-text-primary);
+  transition: all var(--duration-fast) ease;
+}
+
+.test-btn:hover {
+  background-color: var(--color-near-black);
+  color: var(--color-white);
+  border-color: var(--color-near-black);
+}

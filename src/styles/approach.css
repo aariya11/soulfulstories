@@ -1,0 +1,88 @@
+/* 6. The Soulful Approach (The Deep Black Section) */
+.approach-section {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-near-black);
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.approach-headline-part1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 4.2vw, 4.2rem);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  color: rgba(255, 255, 255, 0.48);
+  margin: 1.25rem 0 0.5rem 0;
+  text-transform: uppercase;
+}
+
+.approach-headline-part2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 4.2vw, 4.2rem);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  color: var(--color-white);
+  margin: 0 0 2.5rem 0;
+  text-transform: uppercase;
+}
+
+.approach-philosophy {
+  font-size: clamp(1rem, 1.25vw, 1.15rem);
+  line-height: 1.8;
+  color: var(--color-text-inverse-muted);
+  max-width: 540px;
+  margin-bottom: 2rem;
+}
+
+.approach-pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+  border-top: 1px solid var(--color-border-dark);
+  padding-top: 2rem;
+}
+
+.pillar-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 300;
+  color: var(--color-white);
+  margin: 0 0 0.5rem 0;
+}
+
+.pillar-desc {
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  color: var(--color-text-inverse-muted);
+  margin: 0;
+}
+
+.approach-image-wrap {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--color-charcoal);
+}
+
+.approach-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.05) brightness(0.95);
+  transition: transform 1.2s var(--ease-editorial);
+}
+
+.approach-image-wrap:hover img {
+  transform: scale(1.03);
+}

@@ -1,0 +1,183 @@
+/* 4. Featured Work / Selected Stories */
+.stories-section {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.section-header-editorial {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  margin: 0.75rem 0 0 0;
+  color: var(--color-near-black);
+}
+
+.gallery-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  padding: 0.25rem 0;
+  position: relative;
+  transition: color var(--duration-fast) ease;
+}
+
+.filter-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-near-black);
+  transition: width var(--duration-normal) var(--ease-editorial);
+}
+
+.filter-btn:hover {
+  color: var(--color-text-primary);
+}
+
+.filter-btn.active {
+  color: var(--color-near-black);
+  font-weight: 500;
+}
+
+.filter-btn.active::after {
+  width: 100%;
+}
+
+/* Asymmetric Editorial Grid */
+.editorial-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+}
+
+.story-card {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.story-col-7 {
+  grid-column: span 7;
+}
+
+.story-col-5 {
+  grid-column: span 5;
+  margin-top: clamp(2rem, 5vw, 6rem);
+}
+
+.story-col-6 {
+  grid-column: span 6;
+}
+
+.story-col-4 {
+  grid-column: span 4;
+}
+
+.story-col-8 {
+  grid-column: span 8;
+}
+
+.story-media-container {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-cream);
+  width: 100%;
+}
+
+.aspect-tall {
+  aspect-ratio: 4 / 5;
+}
+
+.aspect-wide {
+  aspect-ratio: 16 / 10;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+.story-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s var(--ease-editorial);
+  display: block;
+}
+
+.story-card:hover .story-card-img {
+  transform: scale(1.035);
+}
+
+.story-badge {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  background-color: rgba(12, 11, 10, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--color-white);
+  padding: 0.35rem 0.75rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+.story-meta {
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-border-light);
+  padding-bottom: 0.75rem;
+}
+
+.story-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2vw, 1.85rem);
+  font-weight: 350;
+  margin: 0;
+  color: var(--color-near-black);
+}
+
+.story-location {
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.story-category-tag {
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  color: var(--color-text-secondary);
+  margin-top: 0.35rem;
+}

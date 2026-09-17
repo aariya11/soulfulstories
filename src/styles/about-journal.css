@@ -1,0 +1,174 @@
+/* 9. About The Studio & Founder */
+.about-section {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: flex-start;
+}
+
+.about-portrait-wrap {
+  position: relative;
+}
+
+.about-portrait-img {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  object-fit: cover;
+  object-position: center 10%;
+  box-shadow: 0 20px 40px rgba(12, 11, 10, 0.06);
+  background-color: var(--color-cream);
+  transition: transform 1.2s var(--ease-editorial);
+}
+
+.about-portrait-img:hover {
+  transform: scale(1.02);
+}
+
+.founder-signature-card {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-border-light);
+  padding-bottom: 1rem;
+}
+
+.founder-name {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.founder-role {
+  font-size: var(--text-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.about-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin: 1.25rem 0 2rem 0;
+  color: var(--color-near-black);
+  text-transform: uppercase;
+}
+
+.about-body-lead {
+  font-size: clamp(1.05rem, 1.35vw, 1.2rem);
+  line-height: 1.7;
+  color: var(--color-text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.about-body-quiet {
+  font-size: var(--text-sm);
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+  margin-bottom: 2.5rem;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  border-top: 1px solid var(--color-border-light);
+  padding-top: 2rem;
+}
+
+.stat-num {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  font-weight: 300;
+  line-height: 1;
+  color: var(--color-near-black);
+}
+
+.stat-label {
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-top: 0.5rem;
+}
+
+/* 10. Journal Section */
+.journal-section {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-offwhite);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.journal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.journal-card {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.journal-img-wrap {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  background-color: var(--color-cream);
+}
+
+.journal-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-editorial);
+}
+
+.journal-card:hover .journal-img-wrap img {
+  transform: scale(1.04);
+}
+
+.journal-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 0.65rem;
+}
+
+.journal-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 350;
+  line-height: 1.25;
+  margin: 0 0 0.75rem 0;
+  color: var(--color-near-black);
+}
+
+.journal-card:hover .journal-title {
+  color: var(--color-accent-subtle);
+}
+
+.journal-excerpt {
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
